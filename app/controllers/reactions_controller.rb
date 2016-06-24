@@ -4,19 +4,19 @@ class ReactionsController < ApplicationController
 	end
 
 	def new
-		@prompt = Prompt.find(params[:prompt_id])
+		@cstrength = Cstrength.find(params[:cstrength_id])
 		@reaction = Reaction.new
 	end
 
 	def create
 		params[:user_id] = session[:user_id]
-		binding.pry
 		@reaction = Reaction.create(reactions_params)
-		@answer1 = Answer.create(body: params[:q1], question_id: Question.first.id, reaction_id: @reaction.id)
-		@answer2 = Answer.create(body: params[:q2], question_id: Question.second.id, reactions_id: @reaction.id)
-		@answer3 = Answer.create(body: params[:q3], question_id: Question.third.id, reactions_id: @reaction.id)
-		if @answer
-      	redirect_to reactions_path
+		
+		Answer.create(body: params[:q1], question_id: Question.first.id, reaction_id: @reaction.id)
+		Answer.create(body: params[:q2], question_id: Question.second.id, reaction_id: @reaction.id)
+		Answer.create(body: params[:q3], question_id: Question.third.id, reaction_id: @reaction.id)
+		if @reaction
+      	redirect_to :root
 		else 
 			render 'new'
 		end
@@ -24,7 +24,7 @@ class ReactionsController < ApplicationController
 
 	private
 	def reactions_params
-		params.permit(:prompt_id, :user_id)
+		params.permit(:cstrength_id, :user_id)
 	end
 
 end

@@ -1,7 +1,7 @@
-<h2><%=@prompt.body%></h2>
+<h2><%=@cstrength.description%></h2>
 
 
-<%= form_for [@prompt, @reaction] do |f| %>
+<%= form_for [@cstrength, @reaction] do |f| %>
   
   <p>
     <%= f.label Question.first.body %><br>
