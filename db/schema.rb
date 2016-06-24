@@ -31,17 +31,16 @@ ActiveRecord::Schema.define(version: 20160623193228) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "prompt_tags", force: :cascade do |t|
-    t.integer  "tag_id",     null: false
-    t.integer  "prompt_id",  null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "prompts", force: :cascade do |t|
-    t.string   "body",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",        null: false
+    t.string   "description", null: false
+    t.string   "concepts",    null: false
+    t.integer  "tag_id",      null: false
+    t.string   "exercise1",   null: false
+    t.string   "exercise2",   null: false
+    t.string   "motto",       null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -59,9 +58,10 @@ ActiveRecord::Schema.define(version: 20160623193228) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",        null: false
+    t.string   "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tones", force: :cascade do |t|
