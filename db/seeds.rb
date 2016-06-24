@@ -1,6 +1,7 @@
 Tag.delete_all
 Prompt.delete_all
 User.delete_all
+Question.delete_all
 
 users = [
   {username: 'alice',
@@ -293,6 +294,13 @@ prompts= [
   }
 ]
 
+questions = [
+  {body:"How did you apply today's intention?"},
+  {body:"How did you feel focussing on this intention?"},
+  {body:"How will this intention influence you in the future?"}
+]
+
+Quesion.create!(questions)
 User.create!(users)
 Tag.create!(tags)
 Cstrength.create!(prompts)
