@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post   'sessions'         => 'sessions#create'
   delete 'sessions/destroy' => 'sessions#destroy'
 
+  get    'test_cloud'       => 'welcome#test_cloud'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
