@@ -1,5 +1,5 @@
 Tag.delete_all
-Prompt.delete_all
+Cstrength.delete_all
 User.delete_all
 Question.delete_all
 
@@ -300,7 +300,7 @@ questions = [
   {body:"How will this intention influence you in the future?"}
 ]
 
-Quesion.create!(questions)
+Question.create!(questions)
 User.create!(users)
 Tag.create!(tags)
 Cstrength.create!(prompts)

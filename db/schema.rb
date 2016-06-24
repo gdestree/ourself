@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20160623193228) do
   end
 
   create_table "reactions", force: :cascade do |t|
-    t.integer  "cstrengths_id",                  null: false
+    t.integer  "cstrength_id",                   null: false
     t.integer  "user_id",                        null: false
     t.float    "sentiment_rating", default: 0.0, null: false
     t.datetime "created_at",                     null: false
