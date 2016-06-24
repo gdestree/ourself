@@ -1,0 +1,24 @@
+<h2><%=@prompt.body%></h2>
+
+
+<%= form_for [@prompt, @reaction] do |f| %>
+  
+  <p>
+    <%= f.label Question.first.body %><br>
+    <%= text_field_tag :q1 %>
+  </p>
+
+   <p>
+    <%= f.label Question.second.body %><br>
+    <%= text_field_tag :q2 %>
+  </p>
+
+   <p>
+    <%= f.label Question.third.body %><br>
+    <%= text_field_tag :q3 %>
+  </p>
+ 
+  <p>
+    <%= f.submit "go"%>
+  </p>
+<% end %>
