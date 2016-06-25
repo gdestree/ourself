@@ -5,4 +5,7 @@ class Reaction < ActiveRecord::Base
   has_many :tones
   has_many :questions, through: :answers, source: :question
 
+  require_relative '../../lib/analysis.rb'
+  include Analysis
+
 end
