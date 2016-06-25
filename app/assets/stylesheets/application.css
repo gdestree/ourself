@@ -14,3 +14,17 @@
  *= require_self
  *= require jqcloud
  */
+
+.jumbotron{
+  margin:auto;
+  padding: 50px;
+  max-width: 70%
+}
+
+.title{
+  text-align: center;
+}
+
+.underline{
+  text-decoration: underline;
+}

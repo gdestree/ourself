@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get    'test_cloud'       => 'welcome#test_cloud'
 
+  get    'cstrengths'       => 'cstrengths#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
