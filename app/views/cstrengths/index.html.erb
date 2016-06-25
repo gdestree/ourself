@@ -1,13 +1,12 @@
 <div class="jumbotron">
-  <h1 class="title">All Character Strengths</h1>
-  <h2></h2>
+  <h1 class="title">Character Strengths</h1>
+  <h2>Intro</h2>
 
   <% @cstrengths.each do |cstrength|%>
   <div>
     <h2>Name: <a href="/cstrengths/<%=cstrength.id%>"> <%= cstrength.name %> </a></h2>
     <h4>Virtue: <%= cstrength.tag.name %></h4>
     <h4>Description: <%= cstrength.description %></h4>
-    <h3>Motto: <%= cstrength.motto %></h3>
     ----------------
   </div>
   <% end %>
