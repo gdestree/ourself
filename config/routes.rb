@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get    'terms'            => 'terms#show'
+
   get    'sessions/login'   => 'sessions#new'
   post   'sessions'         => 'sessions#create'
   delete 'sessions/destroy' => 'sessions#destroy'
