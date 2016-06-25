@@ -1,24 +1,32 @@
-<h2><%=@cstrength.description%></h2>
+<div class="jumbotron">
+
+<h1 class="title"><%= @cstrength.name%></h1>
+<h3><%=@cstrength.description%></h3>
+<h3><span class="underline">Exercise 1:</span> <%=@cstrength.exercise1%></h3>
+<h3><span class="underline">Exercise 2:</span> <%=@cstrength.exercise1%></h3>
+</br>
+
 
 
 <%= form_for [@cstrength, @reaction] do |f| %>
-  
+
   <p>
     <%= f.label Question.first.body %><br>
-    <%= text_field_tag :q1 %>
+    <%= text_area_tag :q1 %>
   </p>
 
    <p>
     <%= f.label Question.second.body %><br>
-    <%= text_field_tag :q2 %>
+    <%= text_area_tag :q2 %>
   </p>
 
    <p>
     <%= f.label Question.third.body %><br>
-    <%= text_field_tag :q3 %>
+    <%= text_area_tag :q3 %>
   </p>
- 
+
   <p>
-    <%= f.submit "go"%>
+    <%= f.submit "Submit"%>
   </p>
 <% end %>
+</div>
