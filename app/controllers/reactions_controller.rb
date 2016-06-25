@@ -11,13 +11,17 @@ class ReactionsController < ApplicationController
 	def create
 		params[:user_id] = session[:user_id]
 		@reaction = Reaction.create(reactions_params)
-		
+
 		Answer.create(body: params[:q1], question_id: Question.first.id, reaction_id: @reaction.id)
 		Answer.create(body: params[:q2], question_id: Question.second.id, reaction_id: @reaction.id)
 		Answer.create(body: params[:q3], question_id: Question.third.id, reaction_id: @reaction.id)
+
+		@reaction.sentiment_call
+		@reaction.tone_call
+
 		if @reaction
       	redirect_to :root
-		else 
+		else
 			render 'new'
 		end
 	end
