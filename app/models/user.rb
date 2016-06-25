@@ -5,5 +5,4 @@ class User < ActiveRecord::Base
   has_many :answers, through: :reactions, source: :answers
 
   has_secure_password
-
 end
