@@ -4,5 +4,16 @@
   <h4><span class="underline">Concepts</span> </br></br><%= @cstrength.concepts %></h4></br>
   <h4><span class="underline">Exercises</span></br></br> - <%= @cstrength.exercise1 %></h4>
   <h4>- <%= @cstrength.exercise2 %></h4></br>
-  <h3><span class="underline">Motto</span> </br></br> <%= @cstrength.motto %></h3>
+  <h4><span class="underline">Motto</span> </br></br> <%= @cstrength.motto %></h4>
+
+  <% if logged_in? && todays_cstrength == @cstrength %>
+    <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id) %> <!-- also needs to check for date -GS -->
+      <div id="reaction-response-options">
+      <h3 >When you've had enough time to reflect:</h3>
+      <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
+      </div>
+    <% else %>
+      <h1>***results for the user go here***</h1>
+    <% end %>
+  <% end %>
 </div>

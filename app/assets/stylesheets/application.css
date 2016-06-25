@@ -85,3 +85,13 @@
 #check_box {
   padding-right: .5em;
 }
+
+
+#reaction-response-options {
+  background-color: #87B6BC;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+  width: 467px;
+  height: 140px;
+}
