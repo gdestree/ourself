@@ -28,3 +28,36 @@
 .underline{
   text-decoration: underline;
 }
+
+#welcome-container {
+  background-color: #87B6BC;
+  color: white;
+  padding-top: 100px;
+  text-align: center;
+  margin: auto;
+  width: 467px;
+  height: 400px;
+}
+
+#daily-container {
+  background-color: #87B6BC;
+  color: white;
+  padding-top: 80px;
+  text-align: center;
+  margin: auto;
+  width: 467px;
+  height: 400px;
+}
+
+.btn-welcome {
+  width: 160px;
+  margin: 2px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+a {
+  color: #3A4B55;
+}

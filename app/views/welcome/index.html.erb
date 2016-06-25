@@ -1,3 +1,19 @@
 <div class="jumbotron">
-  <h1>This is our index page</h1>
+  <% if logged_in? %>
+  <div id='daily-container'>
+    <h1>Welcome, <%= current_user.username %></h1>
+    <h3 class='inline'>Today's Intention is</h3>
+    <h3 class='inline'><%= link_to todays_cstrength.name, cstrength_path(todays_cstrength) %></h3>
+  </div>
+  <% else %>
+  <div id='welcome-container'>
+    <h1>Welcome</h1>
+    <h3 class='inline'>Today's Intention is</h3>
+    <h3 class='inline'><%= link_to todays_cstrength.name, cstrength_path(todays_cstrength) %></h3>
+    <div>
+      <%= link_to "Log in", 'sessions/login', class: 'btn btn-primary btn-welcome'%>
+      <%= link_to "Register", 'users/new', class: 'btn btn-primary btn-welcome'%>
+    </div>
+  </div>
+  <% end %>
 </div>
