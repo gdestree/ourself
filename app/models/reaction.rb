@@ -7,4 +7,6 @@ class Reaction < ActiveRecord::Base
   has_one :tone
   has_many :answers
   has_many :questions, through: :answers, source: :question
+
+  validates :cstrength_id, :user_id, :sentiment_rating, presence: true
 end

@@ -12,7 +12,7 @@
 
   <p>
     <%= f.label :phone_number %><br>
-    <%= f.text_field :username, placeholder: "Username" %>
+    <%= f.text_field :phone_number, placeholder: "Phone Number" %>
   </p>
 
   <p>
@@ -20,9 +20,14 @@
     <%= f.password_field :password, placeholder: "Password" %>
   </p>
 
+  <p class="terms" id="check_box">
+    <%= f.check_box :terms %>
+  </p>
+
+  <p class="terms">I agree to the <a href="/terms" target="_blank">terms and conditions</a></p>
+
   <p>
     <%= f.submit "Submit", class: "btn-lg btn-primary"%>
   </p>
 
-  <p>terms and conditions</p>
 <% end %>

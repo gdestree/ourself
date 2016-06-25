@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <% if logged_in? %>
   <div id='daily-container'>
-    <h1>Welcome, <%= current_user.username %></h1>
+    <h1>Welcome, <%= current_user.first_name.capitalize %></h1>
     <h3 class='inline'>Today's Intention is</h3>
     <h3 class='inline'><%= link_to todays_cstrength.name, cstrength_path(todays_cstrength) %></h3>
   </div>
