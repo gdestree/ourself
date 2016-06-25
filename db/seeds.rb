@@ -4,26 +4,22 @@ User.delete_all
 Question.delete_all
 
 users = [
-  {username: 'alice',
-   first_name:'Alice',
+  {first_name:'Alice',
    email: 'alice@alice.com',
    phone_number: "18001234567",
    password: 'alice'},
 
-  {username: 'david',
-   first_name: 'David',
+  {first_name: 'David',
    email: 'david@david.com',
    phone_number: "18001234567",
    password: 'david'},
 
-  {username: 'george',
-   first_name:'George',
+  {first_name:'George',
    email: 'george@george.com',
    phone_number: "18001234567",
    password: 'george'},
 
-  {username: 'gregor',
-   first_name:'Gregor',
+  {first_name:'Gregor',
    email: 'gregor@gregor.com',
    phone_number: "18001234567",
    password: 'gregor'}
