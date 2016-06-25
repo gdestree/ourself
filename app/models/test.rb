@@ -1,6 +1,6 @@
 class Test
-  require_relative '../../lib/watson.rb'
-  include Watson
+  require_relative '../../lib/analysis.rb'
+  include Analysis
 
   def initialize
   end
