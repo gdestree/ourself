@@ -31,7 +31,7 @@ users = [
 
 tags = [
   {
-    name: "Wisdom and Knowledge",
+    name: "Wisdom",
     description:"Wisdom deals with strengths that involve the way we acquire and use knowledge."
   },
 
@@ -248,7 +248,7 @@ prompts= [
   },
 
   {
-    name: "Appreciation Of Beauty And Excellence",
+    name: "Appreciation Of Beauty",
     description:"Noticing and appreciating beauty, excellence, and/or skilled performance in various domains of life, from nature to art to mathematics to science to everyday experience.",
     concepts: "There are three types of goodness for which individuals high in Appreciation of Beauty and Excellence are responsive to: 1. Physical beauty. This may be visual, auditory, tactile, or abstract. This type of goodness produces awe and wonder in the individual experiencing it. 2. Skill or talent (excellence). This is often energizing, and makes the individual want to pursue their own goals. It produces admiration. 3. Virtue or moral goodness (moral beauty). Virtual goodness makes the individual want to be better, more loving, and produces feelings of elevation.",
     tag_id: 6,
