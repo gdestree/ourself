@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :cstrengths do
     resources :reactions
+    resources :stats, only: [:index]
+    get "stats/(:date)" => "stats#show"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
