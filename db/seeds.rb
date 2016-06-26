@@ -10,7 +10,7 @@ users = [
    password: 'alice'},
 
   {first_name: 'David',
-   email: 'david@david.com',
+   email: 'david.ny.walden@gmail.com',
    phone_number: "18001234567",
    password: 'david'},
 

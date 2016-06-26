@@ -38,4 +38,5 @@ module Analysis
     response = `curl -X POST --form "text=#{text}" --form "apikey=c35fab58-3208-4899-83ce-d61ab0b32218" "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1"`
     self.update_attributes(sentiment_rating: JSON.parse(response)['aggregate']['score'])
   end
+
 end
