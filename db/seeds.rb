@@ -6,22 +6,22 @@ Question.delete_all
 users = [
   {first_name:'Alice',
    email: 'alice@alice.com',
-   phone_number: "18001234567",
+   phone_number: "9176988075",
    password: 'alice'},
 
   {first_name: 'David',
    email: 'david.ny.walden@gmail.com',
-   phone_number: "18001234567",
+   phone_number: "8082864642",
    password: 'david'},
 
   {first_name:'George',
    email: 'george@george.com',
-   phone_number: "18001234567",
+   phone_number: "6104425354",
    password: 'george'},
 
   {first_name:'Gregor',
    email: 'gregor@gregor.com',
-   phone_number: "18001234567",
+   phone_number: "9172136702",
    password: 'gregor'}
 ]
 

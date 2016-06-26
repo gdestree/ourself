@@ -25,11 +25,11 @@ class User < ActiveRecord::Base
     -F text="#{text}"`
   end
 
-  def send_text
-    curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/<AccountSid>/Messages.json' \
-      --data-urlencode 'To=<ToNumber>' \
-      --data-urlencode 'From=<FromNumber>' \
-      --data-urlencode 'Body=<BodyText>' \
-      -u <AccountSid>:<AuthToken>
+  def send_text(message)
+    `curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACd52060fb87ec8b2044ddf6095f3be2ba/Messages.json' \
+      --data-urlencode "To=#{self.phone_number}" \
+      --data-urlencode "From=8086701501" \
+      --data-urlencode "Body=#{message}" \
+      -u ACd52060fb87ec8b2044ddf6095f3be2ba:0d2905c1c2093ff16322c049adfab9ee`
   end
 end
