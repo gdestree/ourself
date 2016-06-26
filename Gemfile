@@ -27,6 +27,9 @@ gem "jqcloud-rails"
 
 gem "d3-rails"
 
+# Assets for mailgun
+# gem 'mailgun-ruby', '~>1.0.5', require: 'mailgun'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
