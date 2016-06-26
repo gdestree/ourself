@@ -13,11 +13,14 @@
       <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
       </div>
     <% else %>
-      <h1>***results for the user go here***</h1>
+      <div class="big radarChart" id="chart-radar" />
+      <script>drawRadarCharts();</script>
     <% end %>
   <% end %>
-  <div class="big radarChart" id="chart-radar" />
-  <script>drawRadarCharts();</script>
+  <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength) %></h3>
+  <% Reaction.where(cstrength_id: @cstrength.id).map{|r|r.created_day}.each do |date| %>
+  <%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}" %>
+  <% end %>
 </div>
 
 
