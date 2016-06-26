@@ -11,6 +11,7 @@ class ReactionsController < ApplicationController
 	def create
 		params[:user_id] = session[:user_id]
 		@reaction = Reaction.create(reactions_params)
+		@reaction.update_attributes(created_day: @reaction.created_at.to_date)
 
 		Answer.create(body: params[:q1], question_id: Question.first.id, reaction_id: @reaction.id)
 		Answer.create(body: params[:q2], question_id: Question.second.id, reaction_id: @reaction.id)
