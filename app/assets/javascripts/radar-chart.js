@@ -2,14 +2,19 @@ $(document).ready(function (){
     var wMaior = 400;
     var wMenor = 200;
 
+    userName = $('#chart-radar').attr('user-name')
+
     var colorscale = d3.scale.category10();
-    var legendOptions = ['Legend 1'];
+    var legendOptions = [userName, 'Community'];
 
     var size = 2;
 
-    toneData = $('#chart-radar').attr('data-chart-info')
-    toneData = toneData.substring(0, toneData.length - 1);
+    toneData = $('#chart-radar').attr('user-data')
     toneData = JSON.parse(toneData);
+
+    globalData = $('#chart-radar').attr('global-data')
+    globalData = globalData.substring(0, globalData.length - 1);
+    globalData = JSON.parse(globalData);
 
     if (size > 0) {
         var json = [
@@ -27,7 +32,20 @@ $(document).ready(function (){
                 {"axis":"extraversion","value":toneData["extraversion"]},
                 {"axis":"agreableness","value":toneData["agreableness"]},
                 {"axis":"emotional_range","value":toneData["emotional_range"]}
-
+            ],[
+                {"axis":"Anger","value":globalData["avg_anger"]},
+                {"axis":"Fear","value":globalData["avg_fear"]},
+                {"axis":"Disgust","value":globalData["avg_disgust"]},
+                {"axis":"Sadness","value":globalData["avg_sadness"]},
+                {"axis":"Joy","value":globalData["avg_joy"]},
+                {"axis":"Analytical","value":globalData["avg_analytical"]},
+                {"axis":"Confidence","value":globalData["avg_confidence"]},
+                {"axis":"Tentative","value":globalData["avg_tentative"]},
+                {"axis":"Openess","value":globalData["avg_openess"]},
+                {"axis":"conscientiousness","value":globalData["avg_conscientiousness"]},
+                {"axis":"extraversion","value":globalData["avg_extraversion"]},
+                {"axis":"agreableness","value":globalData["avg_agreableness"]},
+                {"axis":"emotional_range","value":globalData["avg_emotional_range"]}
             ]
         ];
     }
