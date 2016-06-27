@@ -99,3 +99,14 @@
   width: 467px;
   height: 140px;
 }
+
+.cloud-container {
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+}
+
+#stats-heading {
+  text-align: center;
+  margin: auto;
+}

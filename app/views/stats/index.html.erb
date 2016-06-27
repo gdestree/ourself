@@ -1,1 +1,7 @@
-index.html.erb
+<div class="jumbotron">
+  <div id="stats-heading">
+    <div><h1><%= @cstrength.name %></h1></div>
+    <div id="negative-cloud" class="cloud-container" neg-words=<%= @neg_words %>></div>
+    <div id="positive-cloud" class="cloud-container" pos-words=<%= @pos_words %>></div>
+  </div>
+</div>
