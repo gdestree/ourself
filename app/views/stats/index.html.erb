@@ -1,5 +1,7 @@
 <div class="jumbotron">
-  <h1><%= @cstrength.name %></h1>
-  <div id="negative-cloud" class="cloud-container" style="width: 800px; height: 600px;" neg-words=<%= @neg_words %>></div>
-  <div id="positive-cloud" class="cloud-container" style="width: 800px; height: 600px;" pos-words=<%= @pos_words %>></div>
+  <div id="stats-heading">
+    <div><h1><%= @cstrength.name %></h1></div>
+    <div id="negative-cloud" class="cloud-container" neg-words=<%= @neg_words %>></div>
+    <div id="positive-cloud" class="cloud-container" pos-words=<%= @pos_words %>></div>
+  </div>
 </div>

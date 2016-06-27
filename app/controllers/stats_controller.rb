@@ -9,15 +9,15 @@ class StatsController < ApplicationController
 
     neg_reactions.each do |reaction|
       reaction.answers.each do |answer|
-        @neg_words += answer.body
-        @neg_words += " "
+        @neg_words += answer.body.downcase.gsub(/[^a-z0-9\s]/i, '').gsub(' ','-')
+        @neg_words += "-"
       end
     end
 
     pos_reactions.each do |reaction|
       reaction.answers.each do |answer|
-        @pos_words += answer.body
-        @pos_words += " "
+        @pos_words += answer.body.downcase.gsub(/[^a-z0-9\s]/i, '').gsub(' ','-')
+        @pos_words += "-"
       end
     end
   end

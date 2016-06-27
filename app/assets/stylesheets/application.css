@@ -101,6 +101,12 @@
 }
 
 .cloud-container {
-  border: 1px solid red;
   display: inline-block;
+  width: 600px;
+  height: 400px;
+}
+
+#stats-heading {
+  text-align: center;
+  margin: auto;
 }
