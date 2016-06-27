@@ -86,12 +86,14 @@ ActiveRecord::Schema.define(version: 20160626143723) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name",      null: false
-    t.string   "email",           null: false
+    t.string   "first_name",                  null: false
+    t.string   "email",                       null: false
     t.string   "phone_number"
-    t.string   "password_digest", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.string   "password_digest",             null: false
+    t.integer  "email_reminders", default: 0, null: false
+    t.integer  "text_reminders",  default: 0, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end
