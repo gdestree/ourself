@@ -99,3 +99,8 @@
   width: 467px;
   height: 140px;
 }
+
+.cloud-container {
+  border: 1px solid red;
+  display: inline-block;
+}
