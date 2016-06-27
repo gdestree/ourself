@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def edit
@@ -16,8 +17,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    # binding.pry
-    if params[:user][:terms] == "1"
+    binding.pry
+    if params[:terms] == "1"
       @user = User.new(user_params)
     end
     if @user && @user.save
@@ -49,6 +50,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :email, :phone_number, :password)
+    params.require(:user).permit(:first_name, :email, :phone_number, :password, :email_reminders, :text_reminders)
   end
 end

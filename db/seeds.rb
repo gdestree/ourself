@@ -5,24 +5,32 @@ Question.delete_all
 
 users = [
   {first_name:'Alice',
-   email: 'alice@alice.com',
+   email: 'alicefonfa@gmail.com',
    phone_number: "9176988075",
-   password: 'alice'},
+   password: 'alice',
+   email_reminders: 1,
+   text_reminders: 1},
 
   {first_name: 'David',
    email: 'david.ny.walden@gmail.com',
    phone_number: "8082864642",
-   password: 'david'},
+   password: 'david',
+   email_reminders: 1,
+   text_reminders: 1},
 
   {first_name:'George',
-   email: 'george@george.com',
+   email: 'gskrap@gmail.com',
    phone_number: "6104425354",
-   password: 'george'},
+   password: 'george',
+   email_reminders: 0,
+   text_reminders: 1},
 
   {first_name:'Gregor',
-   email: 'gregor@gregor.com',
+   email: 'gregordestree@gmail.com',
    phone_number: "9172136702",
-   password: 'gregor'}
+   password: 'gregor',
+   email_reminders: 1,
+   text_reminders: 0}
 ]
 
 tags = [

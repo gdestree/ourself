@@ -82,10 +82,14 @@
   display: inline-block;
 }
 
+.reminder_settings {
+  /*display: inline-block;*/
+  margin: .5em;
+}
+
 #check_box {
   padding-right: .5em;
 }
-
 
 #reaction-response-options {
   background-color: #87B6BC;
