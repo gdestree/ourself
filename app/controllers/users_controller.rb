@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
-   
+
     if params[:terms] == "1"
       @user = User.new(user_params)
     end
