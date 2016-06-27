@@ -22,31 +22,31 @@ $(document).ready(function (){
             var json = [
                 [
                     {"axis":"Anger","value":toneData["anger"]},
-                    {"axis":"Fear","value":toneData["fear"]},
                     {"axis":"Disgust","value":toneData["disgust"]},
+                    {"axis":"Fear","value":toneData["fear"]},
                     {"axis":"Sadness","value":toneData["sadness"]},
-                    {"axis":"Joy","value":toneData["joy"]},
-                    {"axis":"Analytical","value":toneData["analytical"]},
-                    {"axis":"Confidence","value":toneData["confidence"]},
                     {"axis":"Tentative","value":toneData["tentative"]},
+                    {"axis":"Analytical","value":toneData["analytical"]},
                     {"axis":"Openness","value":toneData["openess"]},
+                    {"axis":"Confidence","value":toneData["confidence"]},
+                    {"axis":"Joy","value":toneData["joy"]},
                     {"axis":"Conscientiousness","value":toneData["conscientiousness"]},
-                    {"axis":"Extraversion","value":toneData["extraversion"]},
                     {"axis":"Agreeableness","value":toneData["agreableness"]},
+                    {"axis":"Extraversion","value":toneData["extraversion"]},
                     {"axis":"Emotional Range","value":toneData["emotional_range"]}
                 ],[
                     {"axis":"Anger","value":globalData["avg_anger"]},
-                    {"axis":"Fear","value":globalData["avg_fear"]},
                     {"axis":"Disgust","value":globalData["avg_disgust"]},
+                    {"axis":"Fear","value":globalData["avg_fear"]},
                     {"axis":"Sadness","value":globalData["avg_sadness"]},
-                    {"axis":"Joy","value":globalData["avg_joy"]},
-                    {"axis":"Analytical","value":globalData["avg_analytical"]},
-                    {"axis":"Confidence","value":globalData["avg_confidence"]},
                     {"axis":"Tentative","value":globalData["avg_tentative"]},
+                    {"axis":"Analytical","value":globalData["avg_analytical"]},
                     {"axis":"Openness","value":globalData["avg_openess"]},
+                    {"axis":"Confidence","value":globalData["avg_confidence"]},
+                    {"axis":"Joy","value":globalData["avg_joy"]},
                     {"axis":"Conscientiousness","value":globalData["avg_conscientiousness"]},
-                    {"axis":"Extraversion","value":globalData["avg_extraversion"]},
                     {"axis":"Agreeableness","value":globalData["avg_agreableness"]},
+                    {"axis":"Extraversion","value":globalData["avg_extraversion"]},
                     {"axis":"Emotional Range","value":globalData["avg_emotional_range"]}
                 ]
             ];
