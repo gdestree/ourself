@@ -27,11 +27,11 @@ $(document).ready(function (){
                 {"axis":"Analytical","value":toneData["analytical"]},
                 {"axis":"Confidence","value":toneData["confidence"]},
                 {"axis":"Tentative","value":toneData["tentative"]},
-                {"axis":"Openess","value":toneData["openess"]},
-                {"axis":"conscientiousness","value":toneData["conscientiousness"]},
-                {"axis":"extraversion","value":toneData["extraversion"]},
-                {"axis":"agreableness","value":toneData["agreableness"]},
-                {"axis":"emotional_range","value":toneData["emotional_range"]}
+                {"axis":"Openness","value":toneData["openess"]},
+                {"axis":"Conscientiousness","value":toneData["conscientiousness"]},
+                {"axis":"Extraversion","value":toneData["extraversion"]},
+                {"axis":"Agreeableness","value":toneData["agreableness"]},
+                {"axis":"Emotional Range","value":toneData["emotional_range"]}
             ],[
                 {"axis":"Anger","value":globalData["avg_anger"]},
                 {"axis":"Fear","value":globalData["avg_fear"]},
@@ -41,11 +41,11 @@ $(document).ready(function (){
                 {"axis":"Analytical","value":globalData["avg_analytical"]},
                 {"axis":"Confidence","value":globalData["avg_confidence"]},
                 {"axis":"Tentative","value":globalData["avg_tentative"]},
-                {"axis":"Openess","value":globalData["avg_openess"]},
-                {"axis":"conscientiousness","value":globalData["avg_conscientiousness"]},
-                {"axis":"extraversion","value":globalData["avg_extraversion"]},
-                {"axis":"agreableness","value":globalData["avg_agreableness"]},
-                {"axis":"emotional_range","value":globalData["avg_emotional_range"]}
+                {"axis":"Openness","value":globalData["avg_openess"]},
+                {"axis":"Conscientiousness","value":globalData["avg_conscientiousness"]},
+                {"axis":"Extraversion","value":globalData["avg_extraversion"]},
+                {"axis":"Agreeableness","value":globalData["avg_agreableness"]},
+                {"axis":"Emotional Range","value":globalData["avg_emotional_range"]}
             ]
         ];
     }
@@ -64,17 +64,16 @@ $(document).ready(function (){
         var RadarChart = {
             draw: function(id, data, options) {
                 var cfg = {
-                    radius: circleSize,
                     w: w,
                     h: h,
                     factor: 1,
-                    factorLegend: .85,
+                    factorLegend: 0.85,
                     levels: 3,
-                    maxValue: 0,
+                    maxValue: 1.0,
                     radians: 2 * Math.PI,
-                    opacityArea: 0.001,
-                    ToRight: 5,
-                    TranslateX: 80,
+                    opacityArea: 0.7,
+                    ToRight: 2,
+                    TranslateX: 60,
                     TranslateY: 30,
                     ExtraWidthX: 10,
                     ExtraWidthY: 100,
@@ -205,7 +204,7 @@ $(document).ready(function (){
                         .style("fill-opacity", 0.1);
                         g.selectAll(z)
                         .transition(200)
-                        .style("fill-opacity", 0.7);
+                        .style("fill-opacity", 0.9);
                     })
                     .on('mouseout', function() {
                         g.selectAll("polygon")
@@ -282,21 +281,20 @@ $(document).ready(function (){
 
         // Options for the Radar chart, other than default
         var myOptions = {
-            w: w
-            ,h: h
-            ,ExtraWidthX: 180
-            ,labelScale: 0.7
-            ,levels: 5
-            ,levelScale: 0.85
-            ,facetPaddingScale: 1.9
-            ,maxValue: 0.6
-            ,showAxes: true
-            ,showAxesLabels: true
-            ,showLegend: true
-            ,showLevels: true
-            ,showLevelsLabels: false
-            ,showPolygons: true
-            ,showVertices: true
+            w: w,
+            h: h,
+            ExtraWidthX: 180,
+            labelScale: 0.7,
+            levels: 0,
+            levelScale: 0.85,
+            facetPaddingScale: 1.9,
+            maxValue: 1.0,
+            showAxes: true,
+            showAxesLabels: true,
+            showLegend: true,
+            showLevels: true,
+            showLevelsLabels: false,
+            showPolygons: true,
         };
 
         RadarChart.draw(divId, json, myOptions);
