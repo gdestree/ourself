@@ -13,8 +13,7 @@
       <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
       </div>
     <% else %>
-      <div class="big radarChart" id="chart-radar" />
-      <script>drawRadarCharts();</script>
+      <div class="big radarChart" id="chart-radar" user-name=<%= current_user.first_name %> user-data=<%= @tone.to_json %> global-data=<%= @avgs.to_json %>/>
     <% end %>
   <% end %>
   <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength) %></h3>
