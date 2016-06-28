@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
   #   -F text="#{message}"`
   # end
 
-  def reminder_text
-    message = "Hello #{self.first_name}, please take some time today to reflect on the subject of #{todays_cstrength.name}"
+  def welcome_text
+    message = "Welcome to ourself.herokuapp.com, #{self.first_name}. Thanks for joining and have a great day!"
 
     `curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACd52060fb87ec8b2044ddf6095f3be2ba/Messages.json' \
       --data-urlencode "To=#{self.phone_number}" \
@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
       -u ACd52060fb87ec8b2044ddf6095f3be2ba:0d2905c1c2093ff16322c049adfab9ee`
   end
 
-  def welcome_text
+  def reminder_text
     message = "Hello #{self.first_name}, please take some time today to reflect on the subject of #{todays_cstrength.name}"
 
     `curl -X POST 'https://api.twilio.com/2010-04-01/Accounts/ACd52060fb87ec8b2044ddf6095f3be2ba/Messages.json' \

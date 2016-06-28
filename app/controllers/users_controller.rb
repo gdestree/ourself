@@ -48,6 +48,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user
       @user.destroy
+      redirect_to :root
     else
       render '404'
     end
