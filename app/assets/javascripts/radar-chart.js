@@ -3,12 +3,15 @@ $(document).ready(function (){
     //////////////////////// Set-Up //////////////////////////////
     //////////////////////////////////////////////////////////////
     var margin = {top: 100, right: 100, bottom: 100, left: 100},
+        legendPosition = {x: 25, y: 25},
         width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
         height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
 
     //////////////////////////////////////////////////////////////
     ////////////////////////// Data //////////////////////////////
     //////////////////////////////////////////////////////////////
+
+    userName = $('#chart-radar').attr('user-name')
 
     toneData = $('#chart-radar').attr('user-data')
     toneData = JSON.parse(toneData);
@@ -17,7 +20,7 @@ $(document).ready(function (){
     globalData = globalData.substring(0, globalData.length - 1);
     globalData = JSON.parse(globalData);
 
-    var data = [
+    data = [
         [
             {"axis":"Anger","value":toneData["anger"]},
             {"axis":"Disgust","value":toneData["disgust"]},
@@ -54,6 +57,7 @@ $(document).ready(function (){
          w: 600,                //Width of the circle
          h: 600,                //Height of the circle
          margin: {top: 20, right: 20, bottom: 20, left: 20}, //The margins of the SVG
+         legendPosition: {x: 20, y: 20}, // the position of the legend, from the top-left corner of the svg
          levels: 3,             //How many levels or inner circles should there be drawn
          maxValue: 0,           //What is the value that the biggest circle will represent
          labelFactor: 1.25,     //How much farther than the radius of the outer circle should the labels be placed
@@ -312,6 +316,45 @@ $(document).ready(function (){
             }
           });
         }//wrap
+
+        // on mouseover for the legend symbol
+        function cellover(d) {
+            //Dim all blobs
+            d3.selectAll(".radarArea")
+                .transition().duration(200)
+                .style("fill-opacity", 0.1);
+            //Bring back the hovered over blob
+        }
+
+        // on mouseout for the legend symbol
+        function cellout() {
+            //Bring back all blobs
+            d3.selectAll(".radarArea")
+                .transition().duration(200)
+                .style("fill-opacity", cfg.opacityArea);
+        }
+
+        /////////////////////////////////////////////////////////
+        /////////////////// Draw the Legend /////////////////////
+        /////////////////////////////////////////////////////////
+
+        svg.append("g")
+        .attr("class", "legendOrdinal")
+        .attr("transform", "translate(" + cfg["legendPosition"]["x"] + "," + cfg["legendPosition"]["y"] + ")");
+
+        var legendOrdinal = d3.legend.color()
+        //d3 symbol creates a path-string, for example
+        //"M0,-8.059274488676564L9.306048591020996,
+        //8.059274488676564 -9.306048591020996,8.059274488676564Z"
+        .shape("path", d3.svg.symbol().type("triangle-up").size(150)())
+        .shapePadding(10)
+        .scale(cfg.color)
+        .labels([userName, "Community"])
+        .on("cellover", function(d){ cellover(d); })
+        .on("cellout", function(d) { cellout(); });
+
+        svg.select(".legendOrdinal")
+        .call(legendOrdinal);
     }//RadarChart
 
     //////////////////////////////////////////////////////////////
@@ -324,6 +367,7 @@ $(document).ready(function (){
       w: width,
       h: height,
       margin: margin,
+      legendPosition: legendPosition,
       maxValue: 0.5,
       levels: 5,
       roundStrokes: true,
@@ -332,4 +376,6 @@ $(document).ready(function (){
     };
     //Call function to draw the Radar chart
     RadarChart(".radarChart", data, radarChartOptions);
+
+
 })//doc ready

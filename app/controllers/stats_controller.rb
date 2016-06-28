@@ -169,7 +169,7 @@ class StatsController < ApplicationController
       avg_agreableness: 0,
       avg_emotional_range: 0
     }
-    if total_reactions.length > 1
+    if total_reactions.length > 0
       total_reactions.each do |r|
         avgs[:avg_anger] += r.tone["anger"]
         avgs[:avg_disgust] += r.tone["disgust"]
