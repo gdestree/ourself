@@ -20,6 +20,11 @@
     <%= f.password_field :password, placeholder: "Password" %>
   </p>
 
+  <p>
+    <%= f.label :confirm_password %><br>
+    <%= f.password_field :confirm_password, placeholder: "Confirm Password" %>
+  </p>
+
   <p class="terms" id="check_box">
     <%= f.check_box :email_reminders %>
   </p>

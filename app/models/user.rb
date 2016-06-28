@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   validates :first_name,:email, presence: true
   validates :email, uniqueness: true
   validates_format_of :email, with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create
+  validates :password, length: { minimum: 4 }
 
   # def send_email
   #   email = self.email

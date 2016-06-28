@@ -17,8 +17,7 @@ class UsersController < ApplicationController
   end
 
   def create
-
-    if params[:terms] == "1"
+    if params[:terms] == "1" && params[:user][:password] == params[:user][:confirm_password]
       @user = User.new(user_params)
     end
     if @user && @user.save
@@ -36,11 +35,12 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.assign_attributes(params[:user])
-    if @user.save
-      render 'index'
+    # binding.pry
+
+    if params[:user][:password] == params[:user][:confirm_password] && @user.update_attributes(user_params)
+      redirect_to :root
     else
-      render '404'
+      render 'edit'
     end
   end
 
