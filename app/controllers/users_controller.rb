@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     end
     if @user && @user.save
 
-      # UserMailer.welcome_email(@user).deliver
+      UserMailer.welcome_email(@user).deliver_now
       @user.send_email
       @user.send_text
 
