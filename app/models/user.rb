@@ -17,9 +17,9 @@ class User < ActiveRecord::Base
     email = self.email
     message = "Hello #{self.first_name}, please take some time today to reflect on the subject of #{todays_cstrength.name}"
 
-    `curl -s --user 'api:key-9cc61d00a297df556631398ca29a11af' \
-    https://api.mailgun.net/v3/sandbox758b7807d67844029454457680227e69.mailgun.org/messages \
-    -F from='Mailgun Sandbox <postmaster@sandbox758b7807d67844029454457680227e69.mailgun.org>' \
+    `curl -s --user 'api:key-83a6b3d89bd1e4040ec65e17cd9e86d0' \
+    https://api.mailgun.net/v3/appa67cb36fa7114983991810cb10e9909b.mailgun.org/messages \
+    -F from='Mailgun Sandbox <postmaster@appa67cb36fa7114983991810cb10e9909b.mailgun.org>' \
     -F to="#{self.first_name} <#{email}>" \
     -F subject="Daily Intention: #{todays_cstrength.name}" \
     -F text="#{message}"`
