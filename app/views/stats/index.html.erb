@@ -1,7 +1,12 @@
 <div class="jumbotron">
   <div id="stats-heading">
     <div><h1><%= @cstrength.name %></h1></div>
+    <div><h2>All Time</h2></div>
     <div id="negative-cloud" class="cloud-container" neg-words=<%= @neg_words %>></div>
     <div id="positive-cloud" class="cloud-container" pos-words=<%= @pos_words %>></div>
+    <div class="big radarChart" id="chart-radar" user-name=<%= if current_user then current_user.first_name else 'You' end %> user-data=<%= @tone.to_json %> global-data=<%= @avgs.to_json %>/>
   </div>
+  <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
+    <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}" %></div>
+  <% end %>
 </div>
