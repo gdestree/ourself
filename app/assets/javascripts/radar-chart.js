@@ -30,8 +30,8 @@ $(document).ready(function (){
             {"axis":"Openness","value":toneData["openess"]},
             {"axis":"Analytical","value":toneData["analytical"]},
             {"axis":"Confidence","value":toneData["confidence"]},
-            {"axis":"Joy","value":toneData["joy"]},
             {"axis":"Conscientiousness","value":toneData["conscientiousness"]},
+            {"axis":"Joy","value":toneData["joy"]},
             {"axis":"Agreeableness","value":toneData["agreableness"]},
             {"axis":"Extraversion","value":toneData["extraversion"]},
             {"axis":"Emotional Range","value":toneData["emotional_range"]}
@@ -44,8 +44,8 @@ $(document).ready(function (){
             {"axis":"Openness","value":globalData["avg_openess"]},
             {"axis":"Analytical","value":globalData["avg_analytical"]},
             {"axis":"Confidence","value":globalData["avg_confidence"]},
-            {"axis":"Joy","value":globalData["avg_joy"]},
             {"axis":"Conscientiousness","value":globalData["avg_conscientiousness"]},
+            {"axis":"Joy","value":globalData["avg_joy"]},
             {"axis":"Agreeableness","value":globalData["avg_agreableness"]},
             {"axis":"Extraversion","value":globalData["avg_extraversion"]},
             {"axis":"Emotional Range","value":globalData["avg_emotional_range"]}
