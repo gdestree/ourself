@@ -1,5 +1,30 @@
 class StatsController < ApplicationController
+
   def index
+    stop_words = ["a", "across", "after", "afterwards", "again", "against", "all", "almost", "along", "already",
+      "always", "among", "amongst", "amount", "an", "and", "another", "any", "anyhow", "anything", "anywhere",
+      "are", "around", "am", "as", "at", "back", "be", "became", "because", "become", "becomes", "becoming", "been",
+      "before", "beforehand", "behind", "being", "below", "beside", "besides", "between", "beyond", "bill",
+      "both", "bottom", "but", "by", "call", "can", "cannot", "can’t", "cry", "day", "de", "do", "due", "during",
+      "each", "eg", "either", "else", "elsewhere", "enough", "etc", "even", "ever", "every", "everything",
+      "except", "few", "fill", "find", "for", "former", "formerly", "found", "from", "front", "further",
+      "get", "give", "go", "had", "has", "hasn’t", "have", "he", "hence", "her", "here", "hereafter", "hereby",
+      "herein", "hereupon", "hers", "him", "his", "how", "however", "ie", "if", "in", "inc", "indeed", "interest",
+      "into", "i", "is", "it", "its", "it’s", "keep", "last", "latter", "least", "less", "ltd", "made", "many", "may",
+      "me", "meanwhile", "might", "mill", "mine", "more", "moreover", "most", "mostly", "move", "much", "must",
+      "my", "name", "namely", "neither", "never", "nevertheless", "next", "no", "none", "nor", "not", "now",
+      "nowhere", "of", "off", "often", "on", "once", "one", "only", "onto", "or", "otherwise", "out", "over",
+      "own","part", "per", "perhaps", "please", "put", "rather", "re", "same", "see", "seem", "seemed", "seeming",
+      "seems", "serious", "several", "she", "should", "show", "side", "since", "sincere", "so", "some", "somehow",
+      "something", "sometime", "sometimes", "somewhere", "still", "such", "system", "take", "than", "that", "the",
+      "their", "them", "then", "thence", "there", "thereafter", "thereby", "therefore", "therein", "thereupon",
+      "these", "they", "thin", "this", "those", "though", "three", "through", "throughout", "thru", "thus", "to",
+      "together", "too", "top", "toward", "towards", "un", "under", "until", "up", "upon", "us", "very", "via",
+      "was", "we", "well", "were", "what", "whatever", "when", "whence", "whenever", "where", "whereafter",
+      "whereas", "whereby", "wherein", "whereupon", "wherever", "whether", "which", "while", "whither", "who",
+      "whoever", "whole", "whom", "whose", "why", "will", "with", "within", "without", "would", "yet", "you",
+      "your", "yours"]
+
     @cstrength = Cstrength.find(params[:cstrength_id])
     @neg_words = ""
     neg_reactions = @cstrength.reactions.where("sentiment_rating < -0.25")
@@ -13,6 +38,7 @@ class StatsController < ApplicationController
         @neg_words += "-"
       end
     end
+    @neg_words = @neg_words.split("-").delete_if{|x| stop_words.include?(x)}.join('-')
 
     pos_reactions.each do |reaction|
       reaction.answers.each do |answer|
@@ -20,6 +46,8 @@ class StatsController < ApplicationController
         @pos_words += "-"
       end
     end
+    @pos_words = @pos_words.split("-").delete_if{|x| stop_words.include?(x)}.join('-')
+
     reaction = Reaction.where(user_id: session['user_id'], cstrength_id: @cstrength.id).last
     total_reactions = Reaction.where(cstrength_id: @cstrength.id)
       avgs = {
@@ -76,6 +104,30 @@ class StatsController < ApplicationController
   end
 
   def show
+    stop_words = ["a", "across", "after", "afterwards", "again", "against", "all", "almost", "along", "already",
+      "always", "among", "amongst", "amount", "an", "and", "another", "any", "anyhow", "anything", "anywhere",
+      "are", "around", "am", "as", "at", "back", "be", "became", "because", "become", "becomes", "becoming", "been",
+      "before", "beforehand", "behind", "being", "below", "beside", "besides", "between", "beyond", "bill",
+      "both", "bottom", "but", "by", "call", "can", "cannot", "can’t", "cry", "day", "de", "do", "due", "during",
+      "each", "eg", "either", "else", "elsewhere", "enough", "etc", "even", "ever", "every", "everything",
+      "except", "few", "fill", "find", "for", "former", "formerly", "found", "from", "front", "further",
+      "get", "give", "go", "had", "has", "hasn’t", "have", "he", "hence", "her", "here", "hereafter", "hereby",
+      "herein", "hereupon", "hers", "him", "his", "how", "however", "ie", "if", "in", "inc", "indeed", "interest",
+      "into", "i", "is", "it", "its", "it’s", "keep", "last", "latter", "least", "less", "ltd", "made", "many", "may",
+      "me", "meanwhile", "might", "mill", "mine", "more", "moreover", "most", "mostly", "move", "much", "must",
+      "my", "name", "namely", "neither", "never", "nevertheless", "next", "no", "none", "nor", "not", "now",
+      "nowhere", "of", "off", "often", "on", "once", "one", "only", "onto", "or", "otherwise", "out", "over",
+      "own","part", "per", "perhaps", "please", "put", "rather", "re", "same", "see", "seem", "seemed", "seeming",
+      "seems", "serious", "several", "she", "should", "show", "side", "since", "sincere", "so", "some", "somehow",
+      "something", "sometime", "sometimes", "somewhere", "still", "such", "system", "take", "than", "that", "the",
+      "their", "them", "then", "thence", "there", "thereafter", "thereby", "therefore", "therein", "thereupon",
+      "these", "they", "thin", "this", "those", "though", "three", "through", "throughout", "thru", "thus", "to",
+      "together", "too", "top", "toward", "towards", "un", "under", "until", "up", "upon", "us", "very", "via",
+      "was", "we", "well", "were", "what", "whatever", "when", "whence", "whenever", "where", "whereafter",
+      "whereas", "whereby", "wherein", "whereupon", "wherever", "whether", "which", "while", "whither", "who",
+      "whoever", "whole", "whom", "whose", "why", "will", "with", "within", "without", "would", "yet", "you",
+      "your", "yours"]
+
     @cstrength = Cstrength.find(params[:cstrength_id])
     total_reactions = @cstrength.reactions.where(created_day: params["date"])
 
@@ -91,6 +143,7 @@ class StatsController < ApplicationController
         @neg_words += "-"
       end
     end
+    @neg_words = @neg_words.split("-").delete_if{|x| stop_words.include?(x)}.join('-')
 
     pos_reactions.each do |reaction|
       reaction.answers.each do |answer|
@@ -98,6 +151,8 @@ class StatsController < ApplicationController
         @pos_words += "-"
       end
     end
+    @pos_words = @pos_words.split("-").delete_if{|x| stop_words.include?(x)}.join('-')
+
     reaction = Reaction.find_by(user_id: session['user_id'], created_day: params["date"], cstrength_id: @cstrength.id)
     avgs = {
       avg_anger: 0,
