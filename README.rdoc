@@ -4,5 +4,5 @@ ourSelf is designed to bring individuals closer to their communities by keeping 
 
 User story
 
-Every morning, our users will be notified of their daily challenege by email or text message and have the entire day to complete it. At the end of the day, the user will fill out a short survey about their emotional response to the challenege. Once the survey has been submited the user will recieve a sentiment rating and an iteractive graph indicating their emotional response to the challenge. The user is then able to look at community trends and everages and compares their response to the communities. 
+Every morning, our users will be notified of their daily challenege by email or text message and have the entire day to complete it. At the end of the day, the user will fill out a short survey about their emotional response to the challenege. Once the survey has been submited the user will recieve a sentiment rating and an iteractive graph indicating their emotional response to the challenge. The user is then able to look at community trends and averages and compare their reaction. 
 
