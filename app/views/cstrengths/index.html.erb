@@ -1,8 +1,10 @@
-<div class="jumbotron">
+<div class="big-annoying-div">
+<div class="cstrengths-container">
   <h1 class="title">Character Strengths</h1>
   <h2>Intro</h2>
   <p>Each one of us possess all 24 character strengths in varying degrees making up our own unique profiles. The 24 character strengths fall under six broad virtue categories: wisdom, courage, humanity, justice, temperance and transcendence . They are morally and universally valued, encompass our capacities for helping ourselves and others and produce positive effects when we express them. Knowing your constellation of character strengths is the first step towards living a happier, more authentic life.</p>
-
+</div>
+  <div class="super-annoying-div">
   <% @cstrengths.each do |cstrength|%>
   <div class="cstrength-container">
     <h2><a href="/cstrengths/<%=cstrength.id%>"> <%= cstrength.name %> </a></h2>
@@ -10,3 +12,6 @@
   </div>
   <% end %>
 </div>
+</div>
+
+

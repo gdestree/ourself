@@ -1,5 +1,5 @@
-<div class="jumbotron">
-  <h1 class="title">Data</h1>
+<div class="trend-container">
+  <h1 class="title">Trends</h1>
   <% @cstrengths.each do |cstrength|%>
   <div class="cstrength-container">
     <h2><%= link_to cstrength.name, cstrength_stats_path(cstrength) %></h2>
