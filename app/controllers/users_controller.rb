@@ -24,8 +24,8 @@ class UsersController < ApplicationController
     if @user && @user.save
 
       UserMailer.welcome_email(@user).deliver_now
-      @user.send_email
-      @user.send_text
+      # @user.send_email
+      @user.welcome_text
 
       session['user_id'] = @user.id
       redirect_to :root
