@@ -29,6 +29,10 @@ gem "d3-rails"
 
 gem "rails_12factor", group: :production
 
+gem "mail"
+
+gem "figaro"
+
 # Assets for mailgun
 # gem 'mailgun-ruby', '~>1.0.5', require: 'mailgun'
 
