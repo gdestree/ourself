@@ -1,12 +1,14 @@
-<div class="jumbotron">
+
   <% if logged_in? %>
   <div id='daily-container'>
-    <h1>Welcome, <%= current_user.first_name.capitalize %></h1>
-    <h3 class='inline'>Today's Intention is</h3>
-    <h3 class='inline'><%= link_to todays_cstrength.name.upcase, cstrength_path(todays_cstrength), class: "color" %></h3>
+      <h1>Welcome, <%= current_user.first_name.capitalize %></h1>
+      <h3 class='inline'>Today's Intention is</h3>
+      <h3 class='inline'><%= link_to todays_cstrength.name.upcase, cstrength_path(todays_cstrength), class: "color" %></h3>
+
   </div>
   <% else %>
   <div id='welcome-container'>
+    <div class="text-color">
     <h1>Welcome</h1>
     <h3 class='inline'>Today's Intention is</h3>
     <h3 class='inline'><%= link_to todays_cstrength.name.upcase, cstrength_path(todays_cstrength), class: "color" %></h3>
@@ -14,6 +16,7 @@
       <%= link_to "Log in", 'sessions/login', class: 'btn btn-primary btn-welcome'%>
       <%= link_to "Register", 'users/new', class: 'btn btn-primary btn-welcome'%>
     </div>
+    </div>
   </div>
   <% end %>
-</div>
+
