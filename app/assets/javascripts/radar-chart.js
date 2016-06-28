@@ -24,8 +24,8 @@ $(document).ready(function (){
             {"axis":"Fear","value":toneData["fear"]},
             {"axis":"Sadness","value":toneData["sadness"]},
             {"axis":"Tentative","value":toneData["tentative"]},
-            {"axis":"Analytical","value":toneData["analytical"]},
             {"axis":"Openness","value":toneData["openess"]},
+            {"axis":"Analytical","value":toneData["analytical"]},
             {"axis":"Confidence","value":toneData["confidence"]},
             {"axis":"Joy","value":toneData["joy"]},
             {"axis":"Conscientiousness","value":toneData["conscientiousness"]},
@@ -38,8 +38,8 @@ $(document).ready(function (){
             {"axis":"Fear","value":globalData["avg_fear"]},
             {"axis":"Sadness","value":globalData["avg_sadness"]},
             {"axis":"Tentative","value":globalData["avg_tentative"]},
-            {"axis":"Analytical","value":globalData["avg_analytical"]},
             {"axis":"Openness","value":globalData["avg_openess"]},
+            {"axis":"Analytical","value":globalData["avg_analytical"]},
             {"axis":"Confidence","value":globalData["avg_confidence"]},
             {"axis":"Joy","value":globalData["avg_joy"]},
             {"axis":"Conscientiousness","value":globalData["avg_conscientiousness"]},
@@ -134,16 +134,16 @@ $(document).ready(function (){
         .style("filter" , "url(#glow)");
 
         //Text indicating at what % each level is
-        axisGrid.selectAll(".axisLabel")
-           .data(d3.range(1,(cfg.levels+1)).reverse())
-           .enter().append("text")
-           .attr("class", "axisLabel")
-           .attr("x", 4)
-           .attr("y", function(d){return -d*radius/cfg.levels;})
-           .attr("dy", "0.4em")
-           .style("font-size", "10px")
-           .attr("fill", "#737373")
-           .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
+        // axisGrid.selectAll(".axisLabel")
+        //    .data(d3.range(1,(cfg.levels+1)).reverse())
+        //    .enter().append("text")
+        //    .attr("class", "axisLabel")
+        //    .attr("x", 4)
+        //    .attr("y", function(d){return -d*radius/cfg.levels;})
+        //    .attr("dy", "0.4em")
+        //    .style("font-size", "10px")
+        //    .attr("fill", "#737373")
+        //    .text(function(d,i) { return Format(maxValue * d/cfg.levels); });
 
         /////////////////////////////////////////////////////////
         //////////////////// Draw the axes //////////////////////
@@ -327,6 +327,7 @@ $(document).ready(function (){
       maxValue: 0.5,
       levels: 5,
       roundStrokes: true,
+      dotRadius: 0,
       color: color
     };
     //Call function to draw the Radar chart
