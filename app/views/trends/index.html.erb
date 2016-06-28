@@ -1,1 +1,9 @@
-index.html.erb
+<div class="jumbotron">
+  <h1 class="title">Data</h1>
+  <% @cstrengths.each do |cstrength|%>
+  <div class="cstrength-container">
+    <h2><%= link_to cstrength.name, cstrength_stats_path(cstrength) %></h2>
+    <h4><%= cstrength.tag.name %></h4>
+  </div>
+  <% end %>
+</div>
