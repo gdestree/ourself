@@ -110,3 +110,12 @@
   text-align: center;
   margin: auto;
 }
+
+.delete {
+  background-color: #BF1212;
+  margin-bottom: 1em
+}
+
+.delete:hover {
+    background-color: red;
+}
