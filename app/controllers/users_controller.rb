@@ -17,11 +17,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    
+
     if params[:terms] == "1"
       @user = User.new(user_params)
     end
     if @user && @user.save
+
+      # UserMailer.welcome_email(@user).deliver
+      @user.send_email
+      @user.send_text
+
       session['user_id'] = @user.id
       redirect_to :root
     else
