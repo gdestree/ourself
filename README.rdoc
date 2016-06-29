@@ -5,12 +5,12 @@ ourself is an app designed to bring individuals closer to their community throug
 
 Technologies used in the making of ourSelf:
 
-IBM Watson API Tone Analyzer/n
-HPE HavenSentiment Analysis
-D3
-Word Cloud
-Mailgun
-Twilio
+IBM Watson API Tone Analyzer\n
+HPE HavenSentiment Analysis\n
+D3\n
+Word Cloud\n
+Mailgun\n
+Twilio\n
 
-Visit us at http://ourself.herokuapp.com/
+Visit us at http://ourself.herokuapp.com/\n
 
