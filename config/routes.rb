@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get    'trends'           => 'trends#index'
 
   get 'about'   => 'about#index'
+
+  get    'team'             => 'team#show'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
