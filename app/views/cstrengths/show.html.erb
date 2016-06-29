@@ -26,7 +26,7 @@
       <% end %>
     <% end %>
     <div>
-      <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength) %></h3>
+      <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength), class: "color" %></h3>
       <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
       <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}" %></div>
       <% end %>

@@ -31,6 +31,7 @@ body{
   margin-top: 50px;
   max-width: 65%;
   padding:20px;
+  padding-bottom: 100px;
   color:white;
   background-color: rgba(0,0,0,0.6)
 }
@@ -51,6 +52,10 @@ footer{
 
 .underline{
   text-decoration: underline;
+}
+
+.links{
+  color: white;
 }
 
 .cstrengths-container{
@@ -74,12 +79,15 @@ footer{
   height: 300px;
   margin-top:100px;
 }
+
 .text-color{
   color: white;
   opacity: 1;
 }
 #welcome-container {
-  border: 1px solid white;
+  background-size:cover;
+  border: rgba(0,0,0,0.6);
+  border-radius: .25em;
   color: white;
   padding-top: 50px;
   text-align: center;
@@ -88,6 +96,7 @@ footer{
   height: 300px;
   margin-top:100px;
   background-color: rgba(0,0,0,0.6);
+  
 }
 .stats-container{
    color: white;
@@ -96,6 +105,7 @@ footer{
   margin: auto;
   max-width: 80%;
   margin-bottom: 50px
+
 }
 
 .btn-welcome {
@@ -108,7 +118,7 @@ footer{
 }
 
 .color {
-  color: #3A4B55;
+  color: orange;
 }
 
 .color:hover{
