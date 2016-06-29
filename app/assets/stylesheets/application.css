@@ -98,7 +98,7 @@ footer{
   background-color: rgba(0,0,0,0.6);
   min-width: 20em;
   min-height: 25em;
-  
+
 }
 .stats-container{
    color: white;
@@ -297,4 +297,17 @@ tspan, .label {
   padding-right: 4px;
 }
 
-
+.member-container{
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  width:40%;
+  min-width: 15em;
+  height: 20%;
+  text-align: center;
+  padding-left:.75em;
+  padding-right:.5em;
+  padding-bottom:1.5em
+}
