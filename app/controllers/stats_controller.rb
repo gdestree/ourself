@@ -75,10 +75,10 @@ class StatsController < ApplicationController
         avgs[:avg_analytical] += r.tone["analytical"]
         avgs[:avg_confidence] += r.tone["confidence"]
         avgs[:avg_tentative] += r.tone["tentative"]
-        avgs[:avg_openess] += r.tone["openess"]
+        avgs[:avg_openess] += r.tone["openness"]
         avgs[:avg_conscientiousness] += r.tone["conscientiousness"]
-        avgs[:avg_extraversion] += r.tone["extraversion"]
-        avgs[:avg_agreableness] += r.tone["agreableness"]
+        avgs[:avg_extraversion] += r.tone["extroversion"]
+        avgs[:avg_agreableness] += r.tone["agreeableness"]
         avgs[:avg_emotional_range] += r.tone["emotional_range"]
       end
         avgs[:avg_anger] = avgs[:avg_anger] / total_reactions.length
@@ -179,10 +179,10 @@ class StatsController < ApplicationController
         avgs[:avg_analytical] += r.tone["analytical"]
         avgs[:avg_confidence] += r.tone["confidence"]
         avgs[:avg_tentative] += r.tone["tentative"]
-        avgs[:avg_openess] += r.tone["openess"]
+        avgs[:avg_openess] += r.tone["openness"]
         avgs[:avg_conscientiousness] += r.tone["conscientiousness"]
-        avgs[:avg_extraversion] += r.tone["extraversion"]
-        avgs[:avg_agreableness] += r.tone["agreableness"]
+        avgs[:avg_extraversion] += r.tone["extroversion"]
+        avgs[:avg_agreableness] += r.tone["agreeableness"]
         avgs[:avg_emotional_range] += r.tone["emotional_range"]
       end
         avgs[:avg_anger] = avgs[:avg_anger] / total_reactions.length

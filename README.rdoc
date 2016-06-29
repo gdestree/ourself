@@ -1,8 +1,16 @@
 ourSelf
 
-ourSelf is designed to bring individuals closer to their communities by keeping track of their daily emotional responses to given challenges.
+ourself is an app designed to bring individuals closer to their community through self awareness. Our users are given a character strength to learn about and implement. At the end of everyday they are given a survey to fill out which is then sent to the Watson api  and the HPE Haven to be analyzed. The user is returned a sentiment analysis in the form of a word cloud and interactive graph.
 
-User story
 
-Every morning, our users will be notified of their daily challenege by email or text message and have the entire day to complete it. At the end of the day, the user will fill out a short survey about their emotional response to the challenege. Once the survey has been submited the user will recieve a sentiment rating and an iteractive graph indicating their emotional response to the challenge. The user is then able to look at community trends and averages and compare their reaction. 
+Technologies used in the making of ourSelf:
+
+IBM Watson API Tone Analyzer
+HPE HavenSentiment Analysis
+D3
+Word Cloud
+Mailgun
+Twilio
+
+Visit us at http://ourself.herokuapp.com/
 

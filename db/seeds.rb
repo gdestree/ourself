@@ -154,7 +154,7 @@ prompts= [
   {
     name:"Love",
     description:"Valuing close relations with others, in particular those in which sharing and caring are reciprocated; being close to people.",
-    concepts:"There are four types of love, each with a biological and evolutionary base: 1. Attachment love: parent for child; child for parent 2. Compassionate/altruistic love: kindness 3. Companionate love: friendship 4. Romantic love: spouse/partner/boyfriend/girlfriend",
+    concepts:"There are four types of love, each with a biological and evolutionary base: 1. Attachment love: parent for child; child for parent 2. Compassionate/altruistic love: kindness 3. Compassionate love: friendship 4. Romantic love: spouse/partner/boyfriend/girlfriend",
     tag_id:3,
     exercise1:"Convey love at work by making an effort to understand who you're working with, finding out what is important to them and engaging with them on the topic regularly.",
     exercise2:"Engage in a favorite activity with a loved one (e.g., hiking, going to an amusement park, biking, walking in the park, swimming, camping, jogging).",
@@ -304,7 +304,7 @@ prompts= [
 
 questions = [
   {body:"How did you apply today's intention?"},
-  {body:"How did you feel focussing on this intention?"},
+  {body:"How did you feel focusing on this intention?"},
   {body:"How will this intention influence you in the future?"}
 ]
 
