@@ -1,32 +1,35 @@
 <div class="jumbotron">
+  <div class="reaction-form">
+    <h1 class="title"><%= @cstrength.name%></h1>
+    <h3><%=@cstrength.description%></h3>
+    <ul>
+      <li><h3><%=@cstrength.exercise1%></h3></li>
+      <li><h3><%=@cstrength.exercise2%></h3></li>
+    </ul>
+    </br>
 
-<h1 class="title"><%= @cstrength.name%></h1>
-<h3><%=@cstrength.description%></h3>
-<h3><span class="underline">Exercise 1:</span> </br><%=@cstrength.exercise1%></h3>
-<h3><span class="underline">Exercise 2:</span> </br><%=@cstrength.exercise2%></h3>
-</br>
 
 
+    <%= form_for [@cstrength, @reaction] do |f| %>
 
-<%= form_for [@cstrength, @reaction] do |f| %>
+      <p>
+        <%= f.label Question.first.body %><br>
+        <%= text_area_tag :q1, nil, size: "60x5"  %>
+      </p>
 
-  <p>
-    <%= f.label Question.first.body %><br>
-    <%= text_area_tag :q1, nil, size: "60x5"  %>
-  </p>
+       <p>
+        <%= f.label Question.second.body %><br>
+        <%= text_area_tag :q2, nil, size: "60x5"  %>
+      </p>
 
-   <p>
-    <%= f.label Question.second.body %><br>
-    <%= text_area_tag :q2, nil, size: "60x5"  %>
-  </p>
+       <p>
+        <%= f.label Question.third.body %><br>
+        <%= text_area_tag :q3, nil, size: "60x5" %>
+      </p>
 
-   <p>
-    <%= f.label Question.third.body %><br>
-    <%= text_area_tag :q3, nil, size: "60x5" %>
-  </p>
-
-  <p>
-    <%= f.submit "Submit"%>
-  </p>
-<% end %>
+      <p>
+        <%= f.submit "Submit", class: "btn btn-primary"%>
+      </p>
+    <% end %>
+  </div>
 </div>

@@ -379,4 +379,5 @@ $(document).ready(function (){
     RadarChart(".radarChart", data, radarChartOptions);
 }
 
+
 })//doc ready
