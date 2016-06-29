@@ -179,12 +179,10 @@ footer{
 }
 
 #reaction-response-options {
-  background-color: #87B6BC;
   color: white;
-  padding-top: 10px;
-  text-align: center;
-  width: 467px;
-  height: 140px;
+  padding: 10px;
+  width: 500px;
+  height: 100px;
 }
 
 .cloud-container {
@@ -214,6 +212,7 @@ footer{
 
 .motto {
   font-style: italic;
+  font-size: 40px;
 }
 
 input {

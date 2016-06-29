@@ -21,7 +21,7 @@ class ReactionsController < ApplicationController
 		@reaction.tone_call
 
 		if @reaction
-      	redirect_to :root
+      	redirect_to "/cstrengths/#{@reaction.cstrength_id}/stats"
 		else
 			render 'new'
 		end
