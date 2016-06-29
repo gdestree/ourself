@@ -271,3 +271,8 @@ tspan, .label {
 #negative-cloud>.w3 {color: #FF5700;}
 #negative-cloud>.w2 {color: #FF5720;}
 #negative-cloud>.w1 {color: #FF6C1F;}
+
+.user-cstrengths-list {
+  float: right;
+  text-align: right;
+}
