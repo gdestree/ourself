@@ -222,3 +222,27 @@ input[type=text], input[type=password], input[type=email] {
   padding: 5px;
   border-radius: 5px;
 }
+
+.team_container {
+  border: 1px solid white;
+  border-radius: .25em;
+  color: white;
+  padding-top: 50px;
+  text-align: center;
+  margin: auto;
+  max-width: 60%;
+  height: 1100px;
+  margin-top:100px;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 85em;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.social {
+  display: inline-block;
+}
+
+.team_member {
+  margin-top: 1.5em;
+}
