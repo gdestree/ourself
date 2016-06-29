@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get    'cstrengths'       => 'cstrengths#index'
 
   get    'trends'           => 'trends#index'
+
+  get 'about'   => 'about#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

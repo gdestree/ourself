@@ -16,10 +16,6 @@
   <title>ourSelf</title>
   <!-- Bootstrap Core CSS -->
   <%= stylesheet_link_tag "application"%>
-
-
-
-  <title>Extending Empathy</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -38,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand topnav" href="/">ourSelf</a>
+            <a class="navbar-brand topnav" href="/"><%= image_tag("logo1.png", size: "100x26", alt: "Logo ourSelf")%></a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -62,13 +58,10 @@
     </div>
     <!-- /.container -->
   </nav>
-  <div class="home">
-
   <!-- Header -->
 
-
+<div class="home">
   <%= yield %>
-
 </div>
 
   <!-- Footer -->
@@ -88,7 +81,6 @@
                       <li>
                           <a href="/team">Team</a>
                       </li>
-                      <li class="footer-menu-divider">&sdot;</li>
                   </ul>
                   <p class="copyright text-muted small">Copyright &copy; ourSelf 2016. All Rights Reserved</p>
               </div>
@@ -96,14 +88,6 @@
       </div>
   </footer>
   <!-- Bootstrap Core JavaScript -->
-
-
-  <footer class="footer">
-    <div class="container">
-      <p class="text-muted">&copy; 2016 Extending Empathy </p>
-    </div>
-
-  </footer>
 
 </body>
 

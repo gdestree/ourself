@@ -42,6 +42,7 @@ footer{
   left: 0;
   padding: 0px;
   clear: both;
+  text-align: center;
 }
 .title{
   text-align: center;
@@ -221,4 +222,8 @@ input {
 input[type=text], input[type=password], input[type=email] {
   padding: 5px;
   border-radius: 5px;
+}
+
+.list-inline{
+  padding-top: 10px;
 }
