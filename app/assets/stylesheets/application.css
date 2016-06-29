@@ -219,9 +219,18 @@ input {
   color: black;
 }
 
-input[type=text], input[type=password], input[type=email] {
+input[type=text], input[type=password], input[type=email], textarea {
   padding: 5px;
   border-radius: 5px;
+  color: black;
+}
+
+tspan, .label {
+  fill: white;
+}
+
+.reaction-form {
+  margin-bottom: 80px;
 }
 
 .list-inline{
