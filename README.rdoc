@@ -5,7 +5,7 @@ ourself is an app designed to bring individuals closer to their community throug
 
 Technologies used in the making of ourSelf:
 
-#IBM Watson API Tone Analyzer
+IBM Watson API Tone Analyzer/n
 HPE HavenSentiment Analysis
 D3
 Word Cloud
