@@ -1,29 +1,36 @@
 
 
-<div class="cstrengths-show">
+<div class="jumbotron">
 
 <h1 class="title"><%=@cstrength.name%></h1>
-  <h4><span class="underline">Description</span> </br></br> <%= @cstrength.description %></h4></br>
-  <h4><span class="underline">Concepts</span> </br></br><%= @cstrength.concepts %></h4></br>
-  <h4><span class="underline">Exercises</span></br></br> - <%= @cstrength.exercise1 %></h4>
-  <h4>- <%= @cstrength.exercise2 %></h4></br>
-  <h4><span class="underline">Motto</span> </br></br> <%= @cstrength.motto %></h4>
+  <div class="intro">
+    <br>
+    <h4><%= @cstrength.description %></h4></br>
+    <h4><%= @cstrength.concepts %></h4></br>
+    <h4><span class="underline">Exercises</span></br></br>
+    <ul>
+      <li><%= @cstrength.exercise1 %></li>
+      <br>
+      <li><%= @cstrength.exercise2 %></li>
+    </ul>
+    <h2 class="motto"><%= @cstrength.motto %></h4>
 
-  <% if logged_in? && todays_cstrength == @cstrength %>
-    <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
-      <div id="reaction-response-options">
-      <h3 >When you've had enough time to reflect:</h3>
-      <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
-      </div>
-    <% else %>
-      <div class="big radarChart" id="chart-radar" user-name=<%= current_user.first_name %> user-data=<%= @tone.to_json %> global-data=<%= @avgs.to_json %>/>
+    <% if logged_in? && todays_cstrength == @cstrength %>
+      <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
+        <div id="reaction-response-options">
+        <h3 >When you've had enough time to reflect:</h3>
+        <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
+        </div>
+      <% else %>
+        <div class="big radarChart" id="chart-radar" user-name=<%= current_user.first_name %> user-data=<%= @tone.to_json %> global -data=<%= @avgs.to_json %>/>
+      <% end %>
     <% end %>
-  <% end %>
-  <div>
-    <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength) %></h3>
-    <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
-    <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}" %></div>
-    <% end %>
+    <div>
+      <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength) %></h3>
+      <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
+      <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}" %></div>
+      <% end %>
+    </div>
   </div>
 </div>
 

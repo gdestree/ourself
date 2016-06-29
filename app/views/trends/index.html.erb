@@ -8,7 +8,7 @@
     <% @cstrengths.each do |cstrength|%>
     <div class="cstrength-container">
       <h3><%= link_to cstrength.name, cstrength_stats_path(cstrength) %></h2>
-      <h6><%= cstrength.tag.name %></h6>
+      <h6 class="tag-name"><%= cstrength.tag.name %></h6>
     </div>
     <% end %>
   </div>

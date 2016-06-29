@@ -8,7 +8,7 @@
     <% @cstrengths.each do |cstrength|%>
     <div class="cstrength-container">
       <h3><a href="/cstrengths/<%=cstrength.id%>"> <%= cstrength.name %> </a></h2>
-      <h6><%= cstrength.tag.name %></h6>
+      <h6 class="tag-name"><%= cstrength.tag.name %></h6>
     </div>
     <% end %>
   </div>
