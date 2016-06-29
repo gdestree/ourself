@@ -260,3 +260,14 @@ tspan, .label {
 .team_member {
   margin-top: 1.5em;
 }
+
+#negative-cloud>.w10 {color: #AB3505;}
+#negative-cloud>.w9 {color: #C63D06;}
+#negative-cloud>.w8 {color: #E04407;}
+#negative-cloud>.w7 {color: #E13D1F;}
+#negative-cloud>.w6 {color: #D5572E;}
+#negative-cloud>.w5 {color: #DF7634;}
+#negative-cloud>.w4 {color: #FF3E00;}
+#negative-cloud>.w3 {color: #FF5700;}
+#negative-cloud>.w2 {color: #FF5720;}
+#negative-cloud>.w1 {color: #FF6C1F;}

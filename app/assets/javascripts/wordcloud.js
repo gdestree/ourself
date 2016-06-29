@@ -32,7 +32,7 @@ $(document).ready(function(){
 
     $(function() {
       // When DOM is ready, select the container element and call the jQCloud method, passing the array of words as the first argument.
-      $("#negative-cloud").jQCloud(negCloudArray);
+      $("#negative-cloud").jQCloud(negCloudArray, {});
       $("#positive-cloud").jQCloud(posCloudArray);
     });
   }
