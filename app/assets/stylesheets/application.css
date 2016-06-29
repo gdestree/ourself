@@ -44,6 +44,7 @@ footer{
   clear: both;
   text-align: center;
 }
+
 .title{
   text-align: center;
 }
@@ -237,11 +238,10 @@ tspan, .label {
   padding-top: 10px;
 }
 
-.team_container {
-  border: 1px solid white;
+/*.team_container {
   border-radius: .25em;
   color: white;
-  padding-top: 50px;
+  padding-top: 100px;
   text-align: center;
   margin: auto;
   max-width: 60%;
@@ -250,7 +250,11 @@ tspan, .label {
   padding-left: 10em;
   padding-right: 10em;
   padding-bottom: 85em;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.6);
+}*/
+
+#add_space {
+  margin-bottom: 5em;
 }
 
 .social {
