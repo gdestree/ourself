@@ -20,7 +20,7 @@
 }*/
 body{
   background-color:#16174f;
-  background: url("nyc3.jpeg");
+  background: url("paris.jpeg");
 
   background-size: 100% 100%;
   background-repeat: none;
@@ -85,7 +85,7 @@ footer{
   max-width: 40%;
   height: 300px;
   margin-top:100px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.6);
 }
 .stats-container{
    color: white;
