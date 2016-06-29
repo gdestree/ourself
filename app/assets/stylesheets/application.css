@@ -28,8 +28,10 @@ body{
 }
 .jumbotron{
   margin:auto;
+  margin-top: 50px;
   max-width: 65%;
-  padding:25px;
+  padding:20px;
+  background-color: rgba(255,255,255,0.4)
 
 }
 
@@ -121,8 +123,7 @@ footer{
 }
 
 .cstrength-container{
-  border: 2px solid white;
-  color: white;
+  border: 1px solid white;
   border-radius: 5px;
   margin: 10px;
   display: inline-block;
@@ -132,9 +133,9 @@ footer{
   text-align: center;
 }
 
-.big-annoying-div{
+.cstrength-collection {
   margin-bottom: 50px;
-
+  text-align: center;
 }
 
 .user-container{
@@ -203,3 +204,10 @@ footer{
 .delete:hover {
     background-color: red;
 }
+
+.intro {
+  max-width: 75%;
+  margin: auto;
+}
+
+

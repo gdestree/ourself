@@ -1,9 +1,15 @@
-<div class="trend-container">
+<div class="jumbotron">
   <h1 class="title">Trends</h1>
-  <% @cstrengths.each do |cstrength|%>
-  <div class="cstrength-container">
-    <h2><%= link_to cstrength.name, cstrength_stats_path(cstrength) %></h2>
-    <h4><%= cstrength.tag.name %></h4>
+  <div class="intro">
+    <p></p>
   </div>
-  <% end %>
+
+  <div class="cstrength-collection">
+    <% @cstrengths.each do |cstrength|%>
+    <div class="cstrength-container">
+      <h3><%= link_to cstrength.name, cstrength_stats_path(cstrength) %></h2>
+      <h6><%= cstrength.tag.name %></h6>
+    </div>
+    <% end %>
+  </div>
 </div>

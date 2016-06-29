@@ -1,4 +1,5 @@
 $(document).ready(function (){
+    if ($('.radarChart').length > 0) {
     //////////////////////////////////////////////////////////////
     //////////////////////// Set-Up //////////////////////////////
     //////////////////////////////////////////////////////////////
@@ -376,6 +377,6 @@ $(document).ready(function (){
     };
     //Call function to draw the Radar chart
     RadarChart(".radarChart", data, radarChartOptions);
-
+}
 
 })//doc ready
