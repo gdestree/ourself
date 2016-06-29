@@ -96,6 +96,8 @@ footer{
   height: 300px;
   margin-top:100px;
   background-color: rgba(0,0,0,0.6);
+  min-width: 20em;
+  min-height: 25em;
   
 }
 .stats-container{
@@ -294,3 +296,5 @@ tspan, .label {
   padding-left: 4px;
   padding-right: 4px;
 }
+
+
