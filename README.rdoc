@@ -1,28 +1,8 @@
-== README
+ourSelf
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ourSelf is designed to bring individuals closer to their communities by keeping track of their daily emotional responses to given challenges.
 
-Things you may want to cover:
+User story
 
-* Ruby version
+Every morning, our users will be notified of their daily challenege by email or text message and have the entire day to complete it. At the end of the day, the user will fill out a short survey about their emotional response to the challenege. Once the survey has been submited the user will recieve a sentiment rating and an iteractive graph indicating their emotional response to the challenge. The user is then able to look at community trends and averages and compare their reaction. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
