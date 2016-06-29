@@ -1,2 +1,11 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+
+$(document).ready(function(){
+  $('.cstrength-container').on('mouseover', function(){
+    $(this).css("background-color", "rgba(255,255,255,1.0");
+    $(this).find('.links').css("color", "black");
+  });
+  $('.cstrength-container').on('mouseleave', function(){
+    $(this).css("background-color", "transparent");
+    $(this).find('.links').css("color", "white");
+  })
+});
