@@ -69,6 +69,7 @@ footer{
   margin-top:100px;
   border-radius: 5px;
 }
+
 #daily-container {
   border: 1px solid white;
   color: white;
@@ -313,6 +314,10 @@ tspan, .label {
 .big-link {
   margin-top: 0px;
   font-size: 60px;
+}
+
+a, a:hover {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {
