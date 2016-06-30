@@ -13,7 +13,7 @@
     </ul>
     <h2 class="motto"><%= @cstrength.motto %></h2>
 
-    <% if true %>
+    <% if logged_in? && todays_cstrength == @cstrength %>
       <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
         <h3>When you've had enough time to reflect:</h3>
         <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>

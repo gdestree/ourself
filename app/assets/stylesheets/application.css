@@ -93,11 +93,10 @@ footer{
   text-align: center;
   margin: auto;
   max-width: 40%;
-  height: 300px;
+  height: 270px;
   margin-top:100px;
   background-color: rgba(0,0,0,0.6);
   min-width: 20em;
-  min-height: 25em;
 
 }
 .stats-container{
@@ -124,7 +123,7 @@ footer{
 }
 
 .color:hover{
-  color: red;
+  color: white;
 }
 
 .trend-container{
@@ -311,6 +310,11 @@ tspan, .label {
   padding-bottom:1.5em
 }
 
+.big-link {
+  margin-top: 0px;
+  font-size: 60px;
+}
+
 @media only screen and (max-width: 500px) {
     .jumbotron {
         max-width: 90%;
@@ -334,5 +338,13 @@ tspan, .label {
 
     .cloud-container {
       width: 100%;
+    }
+
+    #welcome-container {
+      min-height: 25em;
+    }
+
+    .big-link {
+      font-size: 40px;
     }
 }
