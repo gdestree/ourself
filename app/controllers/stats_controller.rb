@@ -27,10 +27,10 @@ class StatsController < ApplicationController
 
     @cstrength = Cstrength.find(params[:cstrength_id])
     @neg_words = ""
-    neg_reactions = @cstrength.reactions.where("sentiment_rating < -0.25")
+    neg_reactions = @cstrength.reactions.where("sentiment_rating < -0.10")
 
     @pos_words = ""
-    pos_reactions = @cstrength.reactions.where("sentiment_rating > 0.25")
+    pos_reactions = @cstrength.reactions.where("sentiment_rating > 0.10")
 
     neg_reactions.each do |reaction|
       reaction.answers.each do |answer|
@@ -132,10 +132,10 @@ class StatsController < ApplicationController
     total_reactions = @cstrength.reactions.where(created_day: params["date"])
 
     @neg_words = ""
-    neg_reactions = total_reactions.where("sentiment_rating < -0.25")
+    neg_reactions = total_reactions.where("sentiment_rating < -0.10")
 
     @pos_words = ""
-    pos_reactions = total_reactions.where("sentiment_rating > 0.25")
+    pos_reactions = total_reactions.where("sentiment_rating > 0.10")
 
     neg_reactions.each do |reaction|
       reaction.answers.each do |answer|
