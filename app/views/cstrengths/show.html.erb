@@ -3,27 +3,27 @@
 <h1 class="title"><%=@cstrength.name%></h1>
   <div class="intro">
     <br>
-    <h4><%= @cstrength.description %></h4></br>
-    <h4><%= @cstrength.concepts %></h4></br>
-    <h4><span class="underline">Exercises</span></br></br>
+    <p><%= @cstrength.description %></p></br>
+    <p><%= @cstrength.concepts %></p></br>
     <ul>
       <li><%= @cstrength.exercise1 %></li>
       <br>
       <li><%= @cstrength.exercise2 %></li>
     </ul>
-    <h2 class="motto"><%= @cstrength.motto %></h2>
+    <div class="center">
+      <h2 class="motto"><%= @cstrength.motto %></h2>
 
-    <% if logged_in? && todays_cstrength == @cstrength %>
-      <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
-        <h3>When you've had enough time to reflect:</h3>
-        <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
+      <% if logged_in? && todays_cstrength == @cstrength %>
+        <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
+          <%= link_to "Post your reaction", "#{@cstrength.id}/reactions/new", class: "btn btn-primary" %>
+        <% end %>
       <% end %>
-    <% end %>
-    <div>
-      <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength), class: "color" %></h3>
-      <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
-      <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}", class: "color" %></div>
-      <% end %>
+      <div>
+        <h3><%= link_to "All past days focused on #{@cstrength.name}", cstrength_stats_path(@cstrength), class: "color" %></h3>
+        <% Reaction.where(cstrength_id: @cstrength.id).order('created_at desc').map{|r|r.created_day}.uniq.each do |date| %>
+        <div><%= link_to date.strftime('%B %d, %Y'), "#{@cstrength.id}/stats/#{date}", class: "color" %></div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

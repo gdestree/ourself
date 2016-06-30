@@ -8,4 +8,7 @@ $(document).ready(function(){
     $(this).css("background-color", "transparent");
     $(this).find('.links').css("color", "white");
   })
+  $('.cstrength-container').click(function(){
+    if($(this).find("a").length){window.location.href = $(this).find("a:first").attr("href")};
+  })
 });
