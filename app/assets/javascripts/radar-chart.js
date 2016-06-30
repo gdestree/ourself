@@ -103,6 +103,7 @@ $(document).ready(function (){
         var svg = d3.select(id).append("svg")
             .attr("width",  cfg.w + cfg.margin.left + cfg.margin.right)
             .attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom)
+            .attr("id", "radar")
             .attr("class", "radar"+id);
         //Append a g element
         var g = svg.append("g")

@@ -298,7 +298,6 @@ tspan, .label {
 }
 
 .member-container{
-  border: 1px solid white;
   border-radius: 5px;
   margin: 10px;
   display: inline-block;
@@ -310,4 +309,30 @@ tspan, .label {
   padding-left:.75em;
   padding-right:.5em;
   padding-bottom:1.5em
+}
+
+@media only screen and (max-width: 500px) {
+    .jumbotron {
+        max-width: 90%;
+    }
+
+    .member-container {
+      width: 90%;
+    }
+
+    .mobile-text {
+      font-size: 90px;
+    }
+
+    .mobile-scrap {
+      display: none;
+    }
+
+    svg {
+      margin-left: -4em;
+    }
+
+    .cloud-container {
+      width: 100%;
+    }
 }
