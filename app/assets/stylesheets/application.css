@@ -223,6 +223,7 @@ footer{
 }
 
 .motto {
+  font-family: bodoni;
   font-style: italic;
   font-size: 40px;
 }
@@ -320,6 +321,10 @@ a, a:hover {
   text-decoration: none;
 }
 
+.center {
+  text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
     .jumbotron {
         max-width: 90%;
@@ -351,5 +356,16 @@ a, a:hover {
 
     .big-link {
       font-size: 40px;
+    }
+
+    ul {
+      margin-left: -30px;
+    }
+
+    .motto {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
     }
 }
