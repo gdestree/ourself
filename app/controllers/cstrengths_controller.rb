@@ -52,7 +52,7 @@ class CstrengthsController < ApplicationController
         avgs[:avg_agreableness] = avgs[:avg_agreableness] / total_reactions.length
         avgs[:avg_emotional_range] = avgs[:avg_emotional_range] / total_reactions.length
     end
-    @tone = reaction.tone if reaction
+    @tone = reaction[0].tone if reaction.length > 0
     @avgs = avgs
 	end
 end
