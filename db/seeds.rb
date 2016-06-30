@@ -255,7 +255,7 @@ prompts= [
     name: "Appreciation Of Beauty",
     description:"Noticing and appreciating beauty, excellence, and/or skilled performance in various domains of life, from nature to art to mathematics to science to everyday experience.",
     concepts: "There are three types of goodness for which individuals high in Appreciation of Beauty and Excellence are responsive to: 1. Physical beauty. This may be visual, auditory, tactile, or abstract. This type of goodness produces awe and wonder in the individual experiencing it. 2. Skill or talent (excellence). This is often energizing, and makes the individual want to pursue their own goals. It produces admiration. 3. Virtue or moral goodness (moral beauty). Virtual goodness makes the individual want to be better, more loving, and produces feelings of elevation.",
-    tag_id: 6,
+    tag_id:6,
     exercise1:"Keep a 'beauty log.' When you believe you are seeing something beautiful- whether it is from nature, is human-made (e.g.,artwork), or is the virtuous behavior of others- write it down. Describe the beauty in a few sentences.",
     exercise2: "Get regular exposure to green space in your environment, especially if you live/work in an urban setting.",
     motto: "Find beauty in nature, art, ideas, and people.",
