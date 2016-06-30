@@ -5,8 +5,8 @@ class CstrengthsController < ApplicationController
 
 	def show
 		@cstrength = Cstrength.find(params[:id])
-    reaction = Reaction.find_by(user_id: session['user_id'], created_day: Date.today)
-    total_reactions = Reaction.where(created_day: Date.today)
+    reaction = Reaction.where(user_id: session['user_id'], cstrength_id: @cstrength.id).order('created_at desc').limit(1)
+    total_reactions = Reaction.where(cstrength_id: @cstrength.id)
     avgs = {
       avg_anger: 0,
       avg_disgust: 0,
@@ -22,7 +22,7 @@ class CstrengthsController < ApplicationController
       avg_agreableness: 0,
       avg_emotional_range: 0
     }
-    if total_reactions.length > 1
+    if total_reactions.length > 0
       total_reactions.each do |r|
         avgs[:avg_anger] += r.tone["anger"]
         avgs[:avg_disgust] += r.tone["disgust"]
@@ -52,7 +52,7 @@ class CstrengthsController < ApplicationController
         avgs[:avg_agreableness] = avgs[:avg_agreableness] / total_reactions.length
         avgs[:avg_emotional_range] = avgs[:avg_emotional_range] / total_reactions.length
     end
-    @tone = reaction.tone if reaction
+    @tone = reaction[0].tone if reaction.length > 0
     @avgs = avgs
 	end
 end
