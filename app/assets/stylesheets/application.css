@@ -347,8 +347,9 @@ a, a:hover {
     }
 
     .cloud-container {
-      width: 110%;
-      height: 300px;
+      width: 133%;
+      height: 1000px;
+      margin-left: -2.6em;
     }
 
     #welcome-container {
