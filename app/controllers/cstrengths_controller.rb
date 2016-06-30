@@ -24,19 +24,21 @@ class CstrengthsController < ApplicationController
     }
     if total_reactions.length > 0
       total_reactions.each do |r|
-        avgs[:avg_anger] += r.tone["anger"]
-        avgs[:avg_disgust] += r.tone["disgust"]
-        avgs[:avg_fear] += r.tone["fear"]
-        avgs[:avg_joy] += r.tone["joy"]
-        avgs[:avg_sadness] += r.tone["sadness"]
-        avgs[:avg_analytical] += r.tone["analytical"]
-        avgs[:avg_confidence] += r.tone["confidence"]
-        avgs[:avg_tentative] += r.tone["tentative"]
-        avgs[:avg_openess] += r.tone["openess"]
-        avgs[:avg_conscientiousness] += r.tone["conscientiousness"]
-        avgs[:avg_extraversion] += r.tone["extraversion"]
-        avgs[:avg_agreableness] += r.tone["agreableness"]
-        avgs[:avg_emotional_range] += r.tone["emotional_range"]
+        if r.tone
+          avgs[:avg_anger] += r.tone["anger"]
+          avgs[:avg_disgust] += r.tone["disgust"]
+          avgs[:avg_fear] += r.tone["fear"]
+          avgs[:avg_joy] += r.tone["joy"]
+          avgs[:avg_sadness] += r.tone["sadness"]
+          avgs[:avg_analytical] += r.tone["analytical"]
+          avgs[:avg_confidence] += r.tone["confidence"]
+          avgs[:avg_tentative] += r.tone["tentative"]
+          avgs[:avg_openess] += r.tone["openess"]
+          avgs[:avg_conscientiousness] += r.tone["conscientiousness"]
+          avgs[:avg_extraversion] += r.tone["extraversion"]
+          avgs[:avg_agreableness] += r.tone["agreableness"]
+          avgs[:avg_emotional_range] += r.tone["emotional_range"]
+        end
       end
         avgs[:avg_anger] = avgs[:avg_anger] / total_reactions.length
         avgs[:avg_disgust] = avgs[:avg_disgust] / total_reactions.length
