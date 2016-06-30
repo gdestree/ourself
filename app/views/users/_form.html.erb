@@ -25,23 +25,17 @@
     <%= f.password_field :confirm_password, placeholder: "Confirm Password" %>
   </p>
 
-  <p class="terms" id="check_box">
-    <%= f.check_box :email_reminders %>
-  </p>
-  <p class="terms">I would like to receive email reminders</p>
+  <p class="terms" class="check_box">
+    <%= f.check_box :email_reminders %>  I would like to receive email reminders</p>
   <br>
 
-  <p class="terms" id="check_box">
-    <%= f.check_box :text_reminders %>
-  </p>
-  <p class="terms">I would like to receive text reminders</p>
+  <p class="terms" class="check_box">
+    <%= f.check_box :text_reminders %>  I would like to receive text reminders</p>
   <br>
 
   <% if !@user.persisted? %>
-    <p class="terms" id="check_box">
-      <%= check_box_tag :terms %>
-    </p>
-    <p class="terms">I agree to the <a href="/terms" target="_blank">terms and conditions</a></p>
+    <p class="terms" class="check_box">
+      <%= check_box_tag :terms %>  I agree to the <a class="color" href="/terms" target="_blank">terms and conditions</a></p>
   <% end %>
 
   <p>
