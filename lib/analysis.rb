@@ -4,6 +4,8 @@ module Analysis
     self.answers.each do |answer|
       text += answer.body
       text += " "
+      text = text.gsub(/[^a-z ]/i, ' ')
+      text = text.squish
     end
 
     response = `curl -u "33bd7472-b606-458e-9096-bf5654cae533":"7bkuxiZrMYBM" -H "Content-Type: application/json" -d "{\\"text\\": \\"#{text}\\"}" "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19"`
@@ -33,6 +35,8 @@ module Analysis
     self.answers.each do |answer|
       text += answer.body
       text += " "
+      text = text.gsub(/[^a-z ]/i, ' ')
+      text = text.squish
     end
 
     response = `curl -X POST --form "text=#{text}" --form "apikey=c35fab58-3208-4899-83ce-d61ab0b32218" "https://api.havenondemand.com/1/api/sync/analyzesentiment/v1"`
