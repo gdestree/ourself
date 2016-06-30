@@ -15,7 +15,7 @@
     </ul>
     <h2 class="motto"><%= @cstrength.motto %></h2>
 
-    <% if logged_in? && todays_cstrength == @cstrength %>
+    <% if true %>
       <% if !Reaction.find_by(user_id: session['user_id'], cstrength_id: @cstrength.id, created_day: Date.today) %>
         <div id="reaction-response-options">
         <h3>When you've had enough time to reflect:</h3>
