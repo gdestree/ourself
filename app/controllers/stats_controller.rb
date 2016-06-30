@@ -5,12 +5,12 @@ class StatsController < ApplicationController
       "always", "among", "amongst", "amount", "an", "and", "another", "any", "anyhow", "anything", "anywhere",
       "are", "around", "am", "as", "at", "back", "be", "became", "because", "become", "becomes", "becoming", "been",
       "before", "beforehand", "behind", "being", "below", "beside", "besides", "between", "beyond", "bill",
-      "both", "bottom", "but", "by", "call", "can", "cannot", "can’t", "cry", "day", "de", "do", "due", "during",
+      "both", "bottom", "but", "by", "call", "can", "cannot", "can’t", "cry", "day", "de", "do", "dont", "due", "during",
       "each", "eg", "either", "else", "elsewhere", "enough", "etc", "even", "ever", "every", "everything",
       "except", "few", "fill", "find", "for", "former", "formerly", "found", "from", "front", "further",
       "get", "give", "go", "had", "has", "hasn’t", "have", "he", "hence", "her", "here", "hereafter", "hereby",
       "herein", "hereupon", "hers", "him", "his", "how", "however", "ie", "if", "in", "inc", "indeed", "interest",
-      "into", "i", "is", "it", "its", "it’s", "keep", "last", "latter", "least", "less", "ltd", "made", "many", "may",
+      "into", "i", "is", "it", "its", "it’s", "keep", "last", "latter", "least", "less", "like", "ltd", "made", "many", "may",
       "me", "meanwhile", "might", "mill", "mine", "more", "moreover", "most", "mostly", "move", "much", "must",
       "my", "name", "namely", "neither", "never", "nevertheless", "next", "no", "none", "nor", "not", "now",
       "nowhere", "of", "off", "often", "on", "once", "one", "only", "onto", "or", "otherwise", "out", "over",
@@ -34,7 +34,7 @@ class StatsController < ApplicationController
 
     neg_reactions.each do |reaction|
       reaction.answers.each do |answer|
-        @neg_words += answer.body.downcase.gsub(/[^a-z0-9\s]/i, '').gsub(' ','-')
+        @neg_words += answer.body.downcase.gsub(/\n/, ' ').gsub(/[^a-z0-9 ]/i, '').gsub(' ','-')
         @neg_words += "-"
       end
     end
@@ -42,7 +42,7 @@ class StatsController < ApplicationController
 
     pos_reactions.each do |reaction|
       reaction.answers.each do |answer|
-        @pos_words += answer.body.downcase.gsub(/[^a-z0-9\s]/i, '').gsub(' ','-')
+        @pos_words += answer.body.downcase.gsub(/\n/, ' ').gsub(/[^a-z0-9 ]/i, '').gsub(' ','-')
         @pos_words += "-"
       end
     end
