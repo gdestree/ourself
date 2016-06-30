@@ -331,4 +331,8 @@ tspan, .label {
     svg {
       margin-left: -4em;
     }
+
+    .cloud-container {
+      width: 100%;
+    }
 }
