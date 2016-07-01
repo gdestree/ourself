@@ -325,6 +325,10 @@ a, a:hover {
   text-align: center;
 }
 
+#reaction-form-container {
+  text-align: center;
+}
+
 @media only screen and (max-width: 500px) {
     .jumbotron {
         max-width: 90%;
@@ -369,5 +373,9 @@ a, a:hover {
       padding-bottom: 20px;
       border-top: 1px solid gray;
       border-bottom: 1px solid gray;
+    }
+
+    textarea {
+      width: 100%;
     }
 }

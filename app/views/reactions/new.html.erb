@@ -8,28 +8,28 @@
     </ul>
     </br>
 
+    <div id='reaction-form-container'>
+      <%= form_for [@cstrength, @reaction] do |f| %>
 
+        <p>
+          <%= f.label Question.first.body %><br>
+          <%= text_area_tag :q1, nil, size: "60x5"  %>
+        </p>
 
-    <%= form_for [@cstrength, @reaction] do |f| %>
+         <p>
+          <%= f.label Question.second.body %><br>
+          <%= text_area_tag :q2, nil, size: "60x5"  %>
+        </p>
 
-      <p>
-        <%= f.label Question.first.body %><br>
-        <%= text_area_tag :q1, nil, size: "60x5"  %>
-      </p>
+         <p>
+          <%= f.label Question.third.body %><br>
+          <%= text_area_tag :q3, nil, size: "60x5" %>
+        </p>
 
-       <p>
-        <%= f.label Question.second.body %><br>
-        <%= text_area_tag :q2, nil, size: "60x5"  %>
-      </p>
-
-       <p>
-        <%= f.label Question.third.body %><br>
-        <%= text_area_tag :q3, nil, size: "60x5" %>
-      </p>
-
-      <p>
-        <%= f.submit "Submit", class: "btn btn-primary"%>
-      </p>
-    <% end %>
+        <p>
+          <%= f.submit "Submit", class: "btn btn-primary"%>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
