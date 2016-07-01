@@ -10,7 +10,7 @@
 
     <h2>My Character Strengths:</h2>
     <% @user.cstrengths.each do |cstrength| %>
-      <h3><%= link_to cstrength.name, cstrength_path(cstrength) %></h3>
+      <h3><%= link_to cstrength.name, cstrength_path(cstrength), class: "color" %></h3>
     <% end %>
 
 </div>
