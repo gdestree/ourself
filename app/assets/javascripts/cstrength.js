@@ -1,6 +1,7 @@
 $(document).ready(function(){
   window.onpopstate = function() {
     $('.tag-name').css("color", "white");
+    $('.links').css("color", "white");
   }
   $('.cstrength-container').on('mouseover', function(){
     $(this).css("background-color", "rgba(255,255,255,1.0");
