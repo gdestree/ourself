@@ -121,6 +121,7 @@ footer{
 
 .color {
   color: orange;
+  font-size: 32px;
 }
 
 .color:hover{
