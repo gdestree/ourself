@@ -20,7 +20,7 @@
 }*/
 body{
   background-color:#16174f;
-  background: url("paris.jpeg");
+  background: url("img5.jpg");
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -120,7 +120,7 @@ footer{
 }
 
 .color {
-  color: orange;
+  color: pink;
   font-size: 32px;
 }
 
