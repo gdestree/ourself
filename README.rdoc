@@ -1,11 +1,15 @@
-ourSelf
+== OurSelf
 
-ourself is an app designed to bring individuals closer to their community through self awareness. Our users are given a character strength to learn about and implement. At the end of everyday they are given a survey to fill out which is then sent to the Watson api  and the HPE Haven to be analyzed. The user is returned a sentiment analysis in the form of a word cloud and interactive graph.
+Designed to bring individuals closer to their community through self awareness. Each day, our users are given a character strength to learn about and implement. At the end of the day they are asked to write a reflection which is sent to IBM Watson and HPE Haven for tone and sentiment analysis. A user is able to track their emotional trends and compare their reflections to the global user base.
 
+Technologies used in the making of OurSelf:
 
-Technologies used in the making of ourSelf:
+* IBM Watson Tone Analyzer
+* HPE Haven Sentiment Analysis
+* D3.js
+* jQCloud
+* Mailgun
+* Twilio
 
-IBM WatsonAPI Tone Analyzer, HPE HavenSentiment Analysis, D3, Word Cloud, Mailgun, Twilio
 
 Visit us at http://ourself.herokuapp.com/
-
