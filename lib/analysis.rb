@@ -8,7 +8,7 @@ module Analysis
       text = text.squish
     end
 
-    response = `curl -u "33bd7472-b606-458e-9096-bf5654cae533":"7bkuxiZrMYBM" -H "Content-Type: application/json" -d "{\\"text\\": \\"#{text}\\"}" "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19"`
+    response = `curl -u "58d96189-f3a4-4ec7-ae01-88c37480b383":"vX3HYwEEAFs7" -H "Content-Type: application/json" -d "{\\"text\\": \\"#{text}\\"}" "https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2016-05-19"`
     response = JSON.parse(response)
 
     Tone.create(
